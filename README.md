@@ -1,4 +1,4 @@
-# Darren's AndroidTV Automation Framework
+# AndroidTV_Automation_Framework
 
 What is it?
 * This is a basically an Android ADB shell commands automated using python.
@@ -16,7 +16,3 @@ How to use?
 * After that, you can now create your own script. See example xSample_Script.py
 
 
-
-
-
-Inspired by: https://github.com/SVPA-BetsyFox/batty

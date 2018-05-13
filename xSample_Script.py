@@ -1,8 +1,25 @@
-import ADB_Action_Scipt as AScript  # This is where all the actions are
-import TV_App_Packages as TvApp  # This is a list of TV App PKG name
-import Sony_Remote_Keycodes as RCKey  # This is a list of Sony remote key codes
+# First import the ADB_Action_Script.py it must be on the same folder
+from ADB_Action_Scipt import ActionScript
+# then import the RC keys and App PKGs for easy scripting
+from ADB_Action_Scipt import SonyRCKey
+from ADB_Action_Scipt import AppLists
 
+# create an instance of the class
+uroboros = ActionScript()
+rc = SonyRCKey()
+app = AppLists()
 
-AScript.launch_app(TvApp.NETFLIX)  # launch netflix
-AScript.wait_a_sec(2)  # wait 2 seconds, if left blank it will wait 1 sec
-AScript.press_rc_key(RCKey.POWER)  # RC OFF TV (NOTE: key presses pauses 500ms automatically)
+# start scripting
+uroboros.launch_app(app.NETFLIX_pkg)
+uroboros.wait_a_sec(2)
+uroboros.press_rc_key(rc.POWER)
+
+# some apps requires an activity to be able to launch.
+# in this case use this method below.
+uroboros.launch_activity(app.NETFLIX_pkg, app.NETFLIX_act)
+
+# using for loop from 1 to 10
+for i in range(1, 11):
+    uroboros.press_rc_key(rc.POWER)
+    uroboros.wait_a_sec(2)
+    print(f'loop count: {i}')
