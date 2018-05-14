@@ -54,6 +54,15 @@ class ActionScript:
             print("Only Integer or Float is acceptable")
         time.sleep(sec)
 
+    def get_activity(self, app_pkg):
+        """get the main activity of the given app package"""
+        try:
+            out = self.send_adb(f'shell "cmd package resolve-activity --brief {app_pkg} | tail -n 1"')
+            return out
+        except Exception as e:
+            print(e)
+            return f'Error while executing command\n {out}\n error was: {e}'
+
 
 #############################################
 # Below is the list of RC keys for Sony TVs #
