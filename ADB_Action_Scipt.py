@@ -27,8 +27,9 @@ class ActionScript:
             print(e)
             return f'Error while executing command\n {out}\n error was: {e}'
 
-    def launch_activity(self, app_pkg, app_activity):
+    def launch_activity(self, app_pkg):
         """Launch the app_pkg via adb using am start command, requires activity"""
+        app_activity = self.get_activity(app_pkg)
         try:
             out = self.send_adb(f'shell am start -S {app_pkg}/{app_activity}')
             return f'{app_pkg} has been launch!'
