@@ -9,7 +9,7 @@ class ActionScript:
     def __execute_cmd(adb):
         """this will send the command to the shell"""
         try:
-            out = subprocess.check_call(adb)
+            out = subprocess.check_output(adb)
             return out
         except Exception as e:
             print(e)
