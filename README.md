@@ -11,8 +11,7 @@ Requirements:
 * Android TV
 
 How to use?
-* Import ADB_ActionScript.py, TV_App_Packages.py and Sony_Remote_Keycodes.py (works only for Sony TVs)
-* Although you can use generic ADB keycodes found here: https://developer.android.com/reference/android/view/KeyEvent
+* Import ADB_ActionScript.py
 * After that, you can now create your own script. See example xSample_Script.py
 
 
