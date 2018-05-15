@@ -86,4 +86,3 @@ class AppLists:
         """initialize app pkgs and activities"""
         # List of app pkgs
         self.NETFLIX_pkg = "com.ninja"
-        
