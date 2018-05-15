@@ -85,4 +85,4 @@ class AppLists:
     def __init__(self):
         """initialize app pkgs and activities"""
         # List of app pkgs
-        self.NETFLIX_pkg = "com.ninja"
+        self.NETFLIX_pkg = "com.ninja.netflix"
