@@ -64,6 +64,7 @@ class ActionScript:
             print(e)
             return f'Error while executing command\n {out}\n error was: {e}'
 
+# adb shell settings put system accelerometer_rotation 0
 
 #############################################
 # Below is the list of RC keys for Sony TVs #
