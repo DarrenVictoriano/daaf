@@ -4,22 +4,32 @@ from ADB_Action_Scipt import ActionScript
 from ADB_Action_Scipt import SonyRCKey
 from ADB_Action_Scipt import AppLists
 
-# create an instance of the class
+# create an instance of the class, variables can be change
 uroboros = ActionScript()
 rc = SonyRCKey()
 app = AppLists()
 
+# user input
+loop_count = input("Enter how many loop: ")
+
 # start scripting
 uroboros.launch_app(app.NETFLIX_pkg)
-uroboros.wait_a_sec(2)
+uroboros.wait_a_sec() # will wait 1 seconds
 uroboros.press_rc_key(rc.POWER)
+uroboros.wait_a_sec(23) # will wait 23 seconds
 
-# some apps requires an activity to be able to launch.
-# in this case use this method below.
-uroboros.launch_activity(app.NETFLIX_pkg, app.NETFLIX_act)
+# force stop app first then launch it
+# usefull if TV is slow
+uroboros.clear_launch_app(app.NETFLIX_pkg)
 
 # using for loop from 1 to 10
-for i in range(1, 11):
+for i in range(1, 10):
+    uroboros.press_rc_key(rc.POWER)
+    uroboros.wait_a_sec(2)
+    print(f'loop count: {i}')
+
+# using for loop from 1 to loop_count
+for i in range(1, loop_count):
     uroboros.press_rc_key(rc.POWER)
     uroboros.wait_a_sec(2)
     print(f'loop count: {i}')

@@ -27,7 +27,7 @@ class ActionScript:
             print(e)
             return f'Error while executing command\n {out}\n error was: {e}'
 
-    def launch_activity(self, app_pkg):
+    def clear_launch_app(self, app_pkg):
         """Launch the app_pkg via adb using am start command, requires activity"""
         app_activity = self.get_activity(app_pkg)
         try:
@@ -75,6 +75,55 @@ class SonyRCKey:
     def __init__(self):
         """initialize key codes"""
         self.POWER = 'KEYCODE_POWER'
+        self.INPUT = "KEYCODE_TV_INPUT"
+        self.BRAIVA_SYNC_MENU = "KEYCODE_BUTTON_3"
+        self.STB_MENU = "KEYCODE_BUTTON_10"
+
+        self.NUMBER_0 = "KEYCODE_0"
+        self.NUMBER_1 = "KEYCODE_1"
+        self.NUMBER_2 = "KEYCODE_2"
+        self.NUMBER_3 = "KEYCODE_3"
+        self.NUMBER_4 = "KEYCODE_4"
+        self.NUMBER_5 = "KEYCODE_5"
+        self.NUMBER_6 = "KEYCODE_6"
+        self.NUMBER_7 = "KEYCODE_7"
+        self.NUMBER_8 = "KEYCODE_8"
+        self.NUMBER_9 = "KEYCODE_9"
+        self.DOT = "KEYCODE_PERIOD"
+
+        self.GOOGLE_PLAY = "KEYCODE_BUTTON_8"
+        self.NETFLIX = "KEYCODE_BUTTON_4"
+        self.YOUTUBE = "KEYCODE_BUTTON_9"
+        self.YELLOW = "KEYCODE_PROG_YELLOW"
+        self.BLUE = "KEYCODE_PROG_BLUE"
+        self.RED = "KEYCODE_PROG_RED"
+        self.GREEN = "KEYCODE_PROG_GREEN"
+
+        self.ACTION_MENU = "KEYCODE_BUTTON_2"
+        self.GUIDE = "KEYCODE_GUIDE"
+        self.APPS = "KEYCODE_ALL_APPS"
+        self.BACK = "KEYCODE_BACK"
+        self.HOME = "KEYCODE_HOME"
+        self.TV = "KEYCODE_TV"
+
+        self.VOLUME_UP = "KEYCODE_VOLUME_UP"
+        self.VOLUME_DOWN = "KEYCODE_VOLUME_DOWN"
+        self.JUMP = "KEYCODE_LAST_CHANNEL"
+        self.MUTE = "KEYCODE_VOLUME_MUTE"
+        self.CHANNEL_UP = "KEYCODE_CHANNEL_UP"
+        self.CHANNEL_DOWN = "KEYCODE_CHANNEL_DOWN"
+
+        self.AUDIO = "KEYCODE_MEDIA_AUDIO_TRACK"
+        self.FF = "KEYCODE_MEDIA_FAST_FORWARD"
+        self.PLAY = "KEYCODE_MEDIA_PLAY"
+        self.RW = "KEYCODE_MEDIA_REWIND"
+        self.SUBTITLE = "KEYCODE_CAPTIONS"
+        self.PREV = "KEYCODE_MEDIA_PREVIOUS"
+        self.PAUSE = "KEYCODE_MEDIA_PLAY_PAUSE"
+        self.NEXT = "KEYCODE_MEDIA_NEXT"
+        self.HELP = "KEYCODE_HELP"
+        self.WIDE = "KEYCODE_TV_ZOOM_MODE"
+        self.STOP = "KEYCODE_MEDIA_STOP"
 
 
 ####################################################
@@ -86,4 +135,8 @@ class AppLists:
     def __init__(self):
         """initialize app pkgs and activities"""
         # List of app pkgs
-        self.NETFLIX_pkg = "com.ninja.netflix"
+        self.NETFLIX_pkg = "com.netflix.ninja"
+        self.AMAZON_pkg = "com.amazon.amazonvideo.livingroom"
+        self.HULU_pkg = "com.hulu.livingroomplus"
+        self.YOUTUBE_pkg = "com.google.android.youtube.tv"
+        self.VUDU_pkg = "air.com.vudu.air.DownloaderTablet"
