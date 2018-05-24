@@ -14,43 +14,44 @@ class ActionScript:
         except Exception as e:
             print(e)
 
-    def send_adb(self, cmd, device=""):
+    def send_adb(self, cmd):
         """compose the command as an adb shell command"""
-        return self.__execute_cmd(f'adb -s {device} {cmd}'.split(" "))
+        # adb -s {device} {cmd}'.split(" ") for specific device
+        return self.__execute_cmd(f'adb {cmd}'.split(" "))
 
     def launch_app(self, app_pkg):
         """Launch the app_pkg via adb using monkey command"""
         try:
             out = self.send_adb(f'shell monkey -p {app_pkg} 1')
-            return f'{app_pkg} has been launch!'
+            print(f'{app_pkg} has been launch!')
         except Exception as e:
             print(e)
-            return f'Error while executing command\n {out}\n error was: {e}'
+            print(f'Error while executing command\n {out}\n error was: {e}')
 
-    def clear_launch_app(self, app_pkg):
+    def clear_launch_app(self, app_pkg, app_activity):
         """Launch the app_pkg via adb using am start command, requires activity"""
-        app_activity = self.get_activity(app_pkg)
         try:
             out = self.send_adb(f'shell am start -S {app_pkg}/{app_activity}')
-            return f'{app_pkg} has been launch!'
+            print(f'{app_pkg} has been launch!')
         except Exception as e:
             print(e)
-            return f'Error while executing command\n {out}\n error was: {e}'
+            print(f'Error while executing command\n {out}\n error was: {e}')
 
     def press_rc_key(self, rc_key):
         """press the specified remote control key code"""
         try:
             out = self.send_adb(f'shell input keyevent {rc_key}')
-            return f'{rc_key} sent!'
+            print(f'{rc_key} sent!')
         except Exception as e:
             print(e)
-            return f'Error while executing command\n {out}\n error was: {e}'
+            print(f'Error while executing command\n {out}\n error was: {e}')
 
     @staticmethod
     def wait_a_sec(sec=1.0):
         """Pauses the script based on specified time (in seconds)"""
         try:
             sec = float(sec)
+            print(f'pause for {sec} seconds')
         except ValueError:
             print("Only Integer or Float is acceptable")
         time.sleep(sec)
@@ -58,7 +59,18 @@ class ActionScript:
     def get_activity(self, app_pkg):
         """get the main activity of the given app package"""
         try:
-            out = self.send_adb(f'shell "cmd package resolve-activity --brief {app_pkg} | tail -n 1"')
+            out = subprocess.check_output(f'adb shell "cmd package resolve-activity --brief {app_pkg} | tail -n 1"')
+            print(out)
+            return out
+        except Exception as e:
+            print(e)
+            return f'Error while executing command\n {out}\n error was: {e}'
+
+    def get_activity_mfocus(self):
+        """get the main activity of the given app package"""
+        try:
+            out = subprocess.check_output("adb shell dumpsys window windows | grep -E 'mCurrentFocus|mFocusedApp'")
+            print(out)
             return out
         except Exception as e:
             print(e)
@@ -106,6 +118,12 @@ class SonyRCKey:
         self.HOME = "KEYCODE_HOME"
         self.TV = "KEYCODE_TV"
 
+        self.NAV_UP = "KEYCODE_DPAD_UP"
+        self.NAV_DOWN = "KEYCODE_DPAD_DOWN"
+        self.NAV_LEFT = "KEYCODE_DPAD_LEFT"
+        self.NAV_RIGHT = "KEYCODE_DPAD_RIGHT"
+        self.NAV_ENTER = "KEYCODE_DPAD_CENTER"
+
         self.VOLUME_UP = "KEYCODE_VOLUME_UP"
         self.VOLUME_DOWN = "KEYCODE_VOLUME_DOWN"
         self.JUMP = "KEYCODE_LAST_CHANNEL"
@@ -140,3 +158,10 @@ class AppLists:
         self.HULU_pkg = "com.hulu.livingroomplus"
         self.YOUTUBE_pkg = "com.google.android.youtube.tv"
         self.VUDU_pkg = "air.com.vudu.air.DownloaderTablet"
+
+        # List of app app_activity
+        self.NETFLIX_act = "com.netflix.ninja.MainActivity"
+        self.AMAZON_act = "com.amazon.ignition.IgnitionActivity"
+        self.HULU_act = "com.hulu.livingroomplus.MainActivity"
+        self.YOUTUBE_act = "com.google.android.apps.youtube.tv.cobalt.activity.ShellActivity"
+        self.VUDU_act = "com.vudu.android.app.activities.NavigationListActivity"
