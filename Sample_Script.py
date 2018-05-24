@@ -1,35 +1,45 @@
 # First import the ADB_Action_Script.py it must be on the same folder
-from ADB_Action_Scipt import ActionScript
+from tools.ADB_Action_Scipt import ActionScript
 # then import the RC keys and App PKGs for easy scripting
-from ADB_Action_Scipt import SonyRCKey
-from ADB_Action_Scipt import AppLists
+from tools.ADB_Action_Scipt import SonyRCKey
+from tools.ADB_Action_Scipt import AppLists
 
 # create an instance of the class, variables can be change
-uroboros = ActionScript()
+tv = ActionScript()
 rc = SonyRCKey()
 app = AppLists()
 
-# user input
-loop_count = input("Enter how many loop: ")
+# Print Requirements
+print("Requirements:")
+print("HDMI1 with IRBlaster setup")
+print("Amazon, Netflix, Hulu and Vudu are signed in")
+print("Auto program completed for RF\n")
 
-# start scripting
-uroboros.launch_app(app.NETFLIX_pkg)
-uroboros.wait_a_sec() # will wait 1 seconds
-uroboros.press_rc_key(rc.POWER)
-uroboros.wait_a_sec(23) # will wait 23 seconds
+# Print Instructions
+print("This is what the script does:")
+print("Tune to HDMI1 for 1 hour")
+print("Then change channel every 10 minutes")
+print("Launch Netflix for 1 hour")
+print("Launch Amazon for 1 hour")
+print("Tune back to HDMI1 for 1 hour")
+print("Power OFF TV\n")
 
-# force stop app first then launch it
-# usefull if TV is slow
-uroboros.clear_launch_app(app.NETFLIX_pkg)
+start = input("Press Enter to start")
 
-# using for loop from 1 to 10
-for i in range(1, 10):
-    uroboros.press_rc_key(rc.POWER)
-    uroboros.wait_a_sec(2)
-    print(f'loop count: {i}')
+# Automation Start
+# ------------------------------- HDMI1 ----------------------------------
+tv.press_rc_key(rc.TUNE_HDMI1)
+tv.wait_in_seconds(5)
+# channel up
+for i in range(1, 4):
+    tv.press_rc_key(rc.CHANNEL_UP)
+    tv.wait_in_seconds(10) # playback time
+    print(f'CHANNEL UP loop count: {i}')
+# channel down
+for i in range(1, 4):
+    tv.press_rc_key(rc.CHANNEL_DOWN)
+    tv.wait_in_seconds(10) # playback time
+    print(f'CHANNEL DOWN loop count: {i}')
 
-# using for loop from 1 to loop_count
-for i in range(1, loop_count):
-    uroboros.press_rc_key(rc.POWER)
-    uroboros.wait_a_sec(2)
-    print(f'loop count: {i}')
+# ------------------------------- Keep terminal open ---------------------------------
+close = input("Press Enter to close terminal")

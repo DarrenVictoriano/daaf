@@ -1,8 +1,11 @@
+import sys, os.path
+tool_dir = (os.path.abspath(os.path.join(os.path.dirname(__file__), '..')) + '/tools/')
+sys.path.append(tool_dir)
 # First import the ADB_Action_Script.py it must be on the same folder
-from DAAF.ADB_Action_Scipt import ActionScript
+from ADB_Action_Scipt import ActionScript
 # then import the RC keys and App PKGs for easy scripting
-from DAAF.ADB_Action_Scipt import SonyRCKey
-from DAAF.ADB_Action_Scipt import AppLists
+from ADB_Action_Scipt import SonyRCKey
+from ADB_Action_Scipt import AppLists
 
 # create an instance of the class, variables can be change
 tv = ActionScript()
@@ -28,7 +31,7 @@ start = input("Press Enter to start")
 
 # Automation Start
 # ------------------------------- HDMI1 ----------------------------------
-tv.press_rc_key(rc.TUNE_HDMI3)
+tv.press_rc_key(rc.TUNE_HDMI1)
 tv.wait_in_seconds(5)
 # channel up
 for i in range(1, 4):
