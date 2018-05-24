@@ -1,16 +1,16 @@
 import sys, os.path
-tool_dir = (os.path.abspath(os.path.join(os.path.dirname(__file__), '..')) + '/tools/')
+tool_dir = (os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')) + '/tools/')
 sys.path.append(tool_dir)
 # First import the ADB_Action_Script.py it must be on the same folder
 from ADB_Action_Scipt import ActionScript
 # then import the RC keys and App PKGs for easy scripting
-from ADB_Action_Scipt import SonyRCKey
-from ADB_Action_Scipt import AppLists
+from RC_Code import SonyRCKey
+from AppList import AppList
 
 # create an instance of the class, variables can be change
 tv = ActionScript()
 rc = SonyRCKey()
-app = AppLists()
+app = AppList()
 
 # Print Requirements
 print("Requirements:")

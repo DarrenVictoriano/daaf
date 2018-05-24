@@ -1,8 +1,8 @@
 # First import the ADB_Action_Script.py it must be on the same folder
 from tools.ADB_Action_Scipt import ActionScript
 # then import the RC keys and App PKGs for easy scripting
-from tools.ADB_Action_Scipt import SonyRCKey
-from tools.ADB_Action_Scipt import AppLists
+from tools.RC_Code import SonyRCKey
+from tools.AppList import AppLists
 
 # create an instance of the class, variables can be change
 tv = ActionScript()

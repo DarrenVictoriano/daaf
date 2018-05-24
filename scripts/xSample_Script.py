@@ -4,13 +4,13 @@ sys.path.append(tool_dir)
 # First import the ADB_Action_Script.py it must be on the same folder
 from ADB_Action_Scipt import ActionScript
 # then import the RC keys and App PKGs for easy scripting
-from ADB_Action_Scipt import SonyRCKey
-from ADB_Action_Scipt import AppLists
+from RC_Code import SonyRCKey
+from AppList import AppList
 
 # create an instance of the class, variables can be change
 tv = ActionScript()
 rc = SonyRCKey()
-app = AppLists()
+app = AppList()
 
 # Print Requirements
 print("Requirements:")
@@ -26,6 +26,8 @@ print("Launch Netflix for 1 hour")
 print("Launch Amazon for 1 hour")
 print("Tune back to HDMI1 for 1 hour")
 print("Power OFF TV\n")
+
+print(tool_dir)
 
 start = input("Press Enter to start")
 
