@@ -29,16 +29,16 @@ start = input("Press Enter to start")
 # Automation Start
 # ------------------------------- HDMI1 ----------------------------------
 tv.press_rc_key(rc.TUNE_HDMI1)
-tv.wait_in_seconds(5)
+tv.wait_in_second(5)
 # channel up
 for i in range(1, 4):
     tv.press_rc_key(rc.CHANNEL_UP)
-    tv.wait_in_seconds(10) # playback time
+    tv.wait_in_second(10) # playback time
     print(f'CHANNEL UP loop count: {i}')
 # channel down
 for i in range(1, 4):
     tv.press_rc_key(rc.CHANNEL_DOWN)
-    tv.wait_in_seconds(10) # playback time
+    tv.wait_in_second(10) # playback time
     print(f'CHANNEL DOWN loop count: {i}')
 
 # ------------------------------- Keep terminal open ---------------------------------

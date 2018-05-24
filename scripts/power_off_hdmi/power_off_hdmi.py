@@ -32,7 +32,7 @@ start = input("Press Enter to start")
 # Automation Start
 # ------------------------------- HDMI1 ----------------------------------
 tv.press_rc_key(rc.TUNE_HDMI1)
-tv.wait_in_seconds(5)
+tv.wait_in_second(5)
 # channel up
 for i in range(1, 4):
     tv.press_rc_key(rc.CHANNEL_UP)
@@ -46,33 +46,33 @@ for i in range(1, 4):
 
 # ------------------------------- Netflix ---------------------------------
 tv.clear_launch_app(app.NETFLIX_PKG, app.NETFLIX_ACT)
-tv.wait_in_seconds(8) # Wait load netflix
+tv.wait_in_second(8) # Wait load netflix
 tv.press_rc_key(rc.NAV_ENTER)
-tv.wait_in_seconds(2)
+tv.wait_in_second(2)
 tv.press_rc_key(rc.NAV_DOWN)
-tv.wait_in_seconds(1.5)
+tv.wait_in_second(1.5)
 tv.press_rc_key(rc.NAV_ENTER)
-tv.wait_in_seconds(1.5)
+tv.wait_in_second(1.5)
 tv.press_rc_key(rc.NAV_ENTER)
 tv.wait_in_hour(1) # playback time
 tv.press_rc_key(rc.HOME)
-tv.wait_in_seconds(5)
+tv.wait_in_second(5)
 
 # ------------------------------- Amazon ---------------------------------
 tv.clear_launch_app(app.AMAZON_PKG, app.AMAZON_ACT)
-tv.wait_in_seconds(8) # wait load amazon
+tv.wait_in_second(8) # wait load amazon
 tv.press_rc_key(rc.NAV_DOWN)
-tv.wait_in_seconds(1.5)
+tv.wait_in_second(1.5)
 tv.press_rc_key(rc.NAV_ENTER)
-tv.wait_in_seconds(1.5)
+tv.wait_in_second(1.5)
 tv.press_rc_key(rc.NAV_ENTER)
 tv.wait_in_hour(1) # playback time
 tv.press_rc_key(rc.HOME)
-tv.wait_in_seconds(5)
+tv.wait_in_second(5)
 
 # ------------------------------- HDMI1 ----------------------------------
 tv.press_rc_key(rc.TUNE_HDMI3)
-tv.wait_in_seconds(5)
+tv.wait_in_second(5)
 # channel up
 for i in range(1, 4):
     tv.press_rc_key(rc.CHANNEL_UP)

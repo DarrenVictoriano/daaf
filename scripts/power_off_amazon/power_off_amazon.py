@@ -29,45 +29,37 @@ print("Power OFF TV")
 
 
 # Automation Start
-# ------------------------------- HDMI1 ----------------------------------
-tv.press_rc_key(rc.TUNE_HDMI1)
-tv.wait_in_seconds(5)
-# channel up
-for i in range(1, 4):
-    tv.press_rc_key(rc.CHANNEL_UP)
-    tv.wait_in_seconds(5)
-    print(f'CHANNEL UP loop count: {i}')
-# channel down
-for i in range(1, 4):
-    tv.press_rc_key(rc.CHANNEL_DOWN)
-    tv.wait_in_seconds(5)
-    print(f'CHANNEL DOWN loop count: {i}')
+# ------------------------------- Hulu ----------------------------------
+tv.clear_launch_app(app.HULU_PKG, app.HULU_ACT)
+tv.wait_in_second(5) # wait load hulu
+tv.press_rc_key(rc.NAV_ENTER)
+tv.wait_in_hour(1) # playback time
 
 # ------------------------------- Netflix ---------------------------------
 tv.clear_launch_app(app.NETFLIX_PKG, app.NETFLIX_ACT)
-tv.wait_in_seconds(8)
+tv.wait_in_second(8)
 tv.press_rc_key(rc.NAV_ENTER)
-tv.wait_in_seconds(2)
+tv.wait_in_second(2)
 tv.press_rc_key(rc.NAV_DOWN)
-tv.wait_in_seconds(1.5)
+tv.wait_in_second(1.5)
 tv.press_rc_key(rc.NAV_ENTER)
-tv.wait_in_seconds(1.5)
+tv.wait_in_second(1.5)
 tv.press_rc_key(rc.NAV_ENTER) # playback start
 tv.wait_in_minute(1)
 tv.press_rc_key(rc.HOME)
-tv.wait_in_seconds(5)
+tv.wait_in_second(5)
 
 # ------------------------------- Amazon ---------------------------------
 tv.clear_launch_app(app.AMAZON_PKG, app.AMAZON_ACT)
-tv.wait_in_seconds(8)
+tv.wait_in_second(8)
 tv.press_rc_key(rc.NAV_DOWN)
-tv.wait_in_seconds(1.5)
+tv.wait_in_second(1.5)
 tv.press_rc_key(rc.NAV_ENTER)
-tv.wait_in_seconds(1.5)
+tv.wait_in_second(1.5)
 tv.press_rc_key(rc.NAV_ENTER) # playback start
-tv.wait_in_seconds(5)
+tv.wait_in_second(5)
 tv.press_rc_key(rc.HOME)
-tv.wait_in_seconds(5)
+tv.wait_in_second(5)
 
 # RC OFF TV
 tv.press_rc_key(rc.POWER)

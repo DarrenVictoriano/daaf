@@ -47,7 +47,7 @@ class ActionScript:
             print(f'Error while executing command\n {out}\n error was: {e}')
 
     @staticmethod
-    def wait_in_seconds(sec):
+    def wait_in_second(sec):
         """Pauses the script based on specified time (in seconds)"""
         try:
             sec = float(sec)
