@@ -47,14 +47,36 @@ class ActionScript:
             print(f'Error while executing command\n {out}\n error was: {e}')
 
     @staticmethod
-    def wait_a_sec(sec=1.0):
+    def wait_in_seconds(sec):
         """Pauses the script based on specified time (in seconds)"""
         try:
             sec = float(sec)
-            print(f'pause for {sec} seconds')
         except ValueError:
             print("Only Integer or Float is acceptable")
+        print(f'pause for {sec} seconds')
         time.sleep(sec)
+
+    @staticmethod
+    def wait_in_minute(min):
+        """Pauses the script based on specified time (in seconds)"""
+        try:
+            sec = float(min) * 60.0
+            out = float(sec)
+        except ValueError:
+            print("Only Integer or Float is acceptable")
+        print(f'pause for {min} minute/s')
+        time.sleep(out)
+
+    @staticmethod
+    def wait_in_hour(hr):
+        """Pauses the script based on specified time (in seconds)"""
+        try:
+            sec = float(hr) * 3600.0
+            out = float(sec)
+        except ValueError:
+            print("Only Integer or Float is acceptable")
+        print(f'pause for {hr} hour/s')
+        time.sleep(out)
 
     def get_activity(self, app_pkg):
         """get the main activity of the given app package"""
@@ -143,6 +165,12 @@ class SonyRCKey:
         self.WIDE = "KEYCODE_TV_ZOOM_MODE"
         self.STOP = "KEYCODE_MEDIA_STOP"
 
+        # Special keys
+        self.TUNE_HDMI1 = "KEYCODE_TV_INPUT_HDMI_1"
+        self.TUNE_HDMI2 = "KEYCODE_TV_INPUT_HDMI_2"
+        self.TUNE_HDMI3 = "KEYCODE_TV_INPUT_HDMI_3"
+        self.TUNE_HDMI4 = "KEYCODE_TV_INPUT_HDMI_4"
+        self.TUNE_VIDEO = "KEYCODE_TV_INPUT_COMPOSITE_1"
 
 ####################################################
 # Below is the list of app packages and activities #
@@ -153,15 +181,15 @@ class AppLists:
     def __init__(self):
         """initialize app pkgs and activities"""
         # List of app pkgs
-        self.NETFLIX_pkg = "com.netflix.ninja"
-        self.AMAZON_pkg = "com.amazon.amazonvideo.livingroom"
-        self.HULU_pkg = "com.hulu.livingroomplus"
-        self.YOUTUBE_pkg = "com.google.android.youtube.tv"
-        self.VUDU_pkg = "air.com.vudu.air.DownloaderTablet"
+        self.NETFLIX_PKG = "com.netflix.ninja"
+        self.AMAZON_PKG = "com.amazon.amazonvideo.livingroom"
+        self.HULU_PKG = "com.hulu.livingroomplus"
+        self.YOUTUBE_PKG = "com.google.android.youtube.tv"
+        self.VUDU_PKG = "air.com.vudu.air.DownloaderTablet"
 
         # List of app app_activity
-        self.NETFLIX_act = "com.netflix.ninja.MainActivity"
-        self.AMAZON_act = "com.amazon.ignition.IgnitionActivity"
-        self.HULU_act = "com.hulu.livingroomplus.MainActivity"
-        self.YOUTUBE_act = "com.google.android.apps.youtube.tv.cobalt.activity.ShellActivity"
-        self.VUDU_act = "com.vudu.android.app.activities.NavigationListActivity"
+        self.NETFLIX_ACT = "com.netflix.ninja.MainActivity"
+        self.AMAZON_ACT = "com.amazon.ignition.IgnitionActivity"
+        self.HULU_ACT = "com.hulu.livingroomplus.MainActivity"
+        self.YOUTUBE_ACT = "com.google.android.apps.youtube.tv.cobalt.activity.ShellActivity"
+        self.VUDU_ACT = "com.vudu.android.app.activities.NavigationListActivity"
