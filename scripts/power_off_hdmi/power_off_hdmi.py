@@ -15,8 +15,7 @@ app = AppLists()
 # Print Requirements
 print("Requirements:")
 print("HDMI1 with IRBlaster setup")
-print("Amazon, Netflix, Hulu and Vudu are signed in")
-print("Auto program completed for RF\n")
+print("Amazon, Netflix, Hulu and Vudu are signed in\n")
 
 # Print Instructions
 print("This is what the script does:")

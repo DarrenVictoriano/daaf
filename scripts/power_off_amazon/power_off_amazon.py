@@ -20,8 +20,7 @@ print("Auto program completed for RF\n")
 
 # Print Instructions
 print("This is what the script does:")
-print("Tune to HDMI1 for 1 hour")
-print("Then change channel every 10 minutes")
+print("Launch Hulu for 1 hour")
 print("Launch Netflix for 1 hour")
 print("Launch Amazon for 1 hour")
 print("Tune back to HDMI1 for 1 hour")
