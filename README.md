@@ -17,7 +17,8 @@ How to use the scripts:
 
 Create your own:
 * Create a python file then import the following:
-    >>>
+```
     from tools.ADB_Action_Scipt import ActionScript
     from tools.RC_Code import SonyRCKey
     from tools.AppList import AppLists
+```
