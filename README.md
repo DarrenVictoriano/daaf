@@ -17,8 +17,7 @@ How to use the scripts:
 
 Create your own:
 * Create a python file then import the following:
-    >>># First import the ADB_Action_Script.py it must be on the same folder
+    >>>
     from tools.ADB_Action_Scipt import ActionScript
-    # then import the RC keys and App PKGs for easy scripting
     from tools.RC_Code import SonyRCKey
     from tools.AppList import AppLists
