@@ -33,13 +33,13 @@ tv.wait_in_second(5)
 # channel up
 for i in range(1, 4):
     tv.press_rc_key(rc.CHANNEL_UP)
-    tv.wait_in_second(10) # playback time
+    tv.wait_in_second(10)  # playback time
     print(f'CHANNEL UP loop count: {i}')
 # channel down
 for i in range(1, 4):
     tv.press_rc_key(rc.CHANNEL_DOWN)
-    tv.wait_in_second(10) # playback time
+    tv.wait_in_second(10)  # playback time
     print(f'CHANNEL DOWN loop count: {i}')
 
-# ------------------------------- Keep terminal open ---------------------------------
-close = input("Press Enter to close terminal")
+# ------------------------ Keep terminal open -----------------------------
+close = input("Press Enter to End")

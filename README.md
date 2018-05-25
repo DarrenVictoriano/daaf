@@ -10,8 +10,15 @@ Requirements:
 * ADB installed and in the path
 * Android TV
 
-How to use?
-* Import ADB_ActionScript.py
-* After that, you can now create your own script. See example xSample_Script.py
+How to use the scripts:
+* Download or Clone Repository
+* Select script to run /DAAF/script/
+* Run python script
 
-
+Create your own:
+* Create a python file then import the following:
+    >>># First import the ADB_Action_Script.py it must be on the same folder
+    from tools.ADB_Action_Scipt import ActionScript
+    # then import the RC keys and App PKGs for easy scripting
+    from tools.RC_Code import SonyRCKey
+    from tools.AppList import AppLists
