@@ -35,11 +35,11 @@ class SonyRCKey:
         self.HOME = "KEYCODE_HOME"
         self.TV = "KEYCODE_TV"
 
-        self.NAV_UP = "KEYCODE_DPAD_UP"
-        self.NAV_DOWN = "KEYCODE_DPAD_DOWN"
-        self.NAV_LEFT = "KEYCODE_DPAD_LEFT"
-        self.NAV_RIGHT = "KEYCODE_DPAD_RIGHT"
-        self.NAV_ENTER = "KEYCODE_DPAD_CENTER"
+        self.UP = "KEYCODE_DPAD_UP"
+        self.DOWN = "KEYCODE_DPAD_DOWN"
+        self.LEFT = "KEYCODE_DPAD_LEFT"
+        self.RIGHT = "KEYCODE_DPAD_RIGHT"
+        self.ENTER = "KEYCODE_DPAD_CENTER"
 
         self.VOLUME_UP = "KEYCODE_VOLUME_UP"
         self.VOLUME_DOWN = "KEYCODE_VOLUME_DOWN"
@@ -61,8 +61,8 @@ class SonyRCKey:
         self.STOP = "KEYCODE_MEDIA_STOP"
 
         # Special keys
-        self.TUNE_HDMI1 = "KEYCODE_TV_INPUT_HDMI_1"
-        self.TUNE_HDMI2 = "KEYCODE_TV_INPUT_HDMI_2"
-        self.TUNE_HDMI3 = "KEYCODE_TV_INPUT_HDMI_3"
-        self.TUNE_HDMI4 = "KEYCODE_TV_INPUT_HDMI_4"
-        self.TUNE_VIDEO = "KEYCODE_TV_INPUT_COMPOSITE_1"
+        self.HDMI1 = "KEYCODE_TV_INPUT_HDMI_1"
+        self.HDMI2 = "KEYCODE_TV_INPUT_HDMI_2"
+        self.HDMI3 = "KEYCODE_TV_INPUT_HDMI_3"
+        self.HDMI4 = "KEYCODE_TV_INPUT_HDMI_4"
+        self.VIDEO = "KEYCODE_TV_INPUT_COMPOSITE_1"

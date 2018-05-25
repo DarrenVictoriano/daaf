@@ -29,7 +29,7 @@ class ActionScript:
             print(f'Error while executing command\n {out}\n error was: {e}')
 
     def clear_launch_app(self, app_pkg, app_activity):
-        """Launch the app_pkg via adb using am start command, requires activity"""
+        """Launch the app pkg and act via adb using am start command"""
         try:
             out = self.send_adb(f'shell am start -S {app_pkg}/{app_activity}')
             print(f'{app_pkg} has been launch!')
@@ -81,7 +81,8 @@ class ActionScript:
     def get_activity(self, app_pkg):
         """get the main activity of the given app package"""
         try:
-            out = subprocess.check_output(f'adb shell "cmd package resolve-activity --brief {app_pkg} | tail -n 1"')
+            out = subprocess.check_output(
+                f'adb shell "cmd package resolve-activity --brief {app_pkg} | tail -n 1"')
             print(out)
             return out
         except Exception as e:
@@ -91,7 +92,8 @@ class ActionScript:
     def get_activity_mfocus(self):
         """get the main activity of the given app package"""
         try:
-            out = subprocess.check_output("adb shell dumpsys window windows | grep -E 'mCurrentFocus|mFocusedApp'")
+            out = subprocess.check_output(
+                "adb shell dumpsys window windows | grep -E 'mCurrentFocus|mFocusedApp'")
             print(out)
             return out
         except Exception as e:
