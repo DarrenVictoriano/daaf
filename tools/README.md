@@ -11,5 +11,5 @@ Requirements:
 * Android TV
 
 How to use?
-* Import ADB_ActionScript.py
-* After that, you can now create your own script. See example xSample_Script.py
+* Navigate to /DAAF/script/
+* Then read the description

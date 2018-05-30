@@ -1,5 +1,8 @@
-import sys, os.path
-tool_dir = (os.path.abspath(os.path.join(os.path.dirname(__file__), '..')) + '/tools/')
+# include path for /tools folder
+import sys
+import os.path
+tool_dir = (os.path.abspath(
+            os.path.join(os.path.dirname(__file__), '..', '..')) + '/tools/')
 sys.path.append(tool_dir)
 # First import the ADB_Action_Script.py it must be on the same folder
 from ADB_Action_Scipt import ActionScript
@@ -27,12 +30,11 @@ print("Launch Amazon for 1 hour")
 print("Tune back to HDMI1 for 1 hour")
 print("Power OFF TV\n")
 
-print(tool_dir)
 
 start = input("Press Enter to start")
 
 # Automation Start
 
 
-# ------------------------------- Keep terminal open ---------------------------------
+# ----------------------- Keep terminal open -----------------------------
 close = input("Press Enter to close terminal")

@@ -2,12 +2,12 @@
 from tools.ADB_Action_Scipt import ActionScript
 # then import the RC keys and App PKGs for easy scripting
 from tools.RC_Code import SonyRCKey
-from tools.AppList import AppLists
+from tools.AppList import AppList
 
 # create an instance of the class, variables can be change
 tv = ActionScript()
 rc = SonyRCKey()
-app = AppLists()
+app = AppList()
 
 # Print Requirements
 print("Requirements:")

@@ -1,12 +1,15 @@
+# include path for /tools folder
 import sys
 import os.path
-tool_dir = (os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')) + '/tools/')
+tool_dir = (os.path.abspath(
+            os.path.join(os.path.dirname(__file__), '..', '..')) + '/tools/')
 sys.path.append(tool_dir)
 # First import the ADB_Action_Script.py it must be on the same folder
 from ADB_Action_Scipt import ActionScript
 # then import the RC keys and App PKGs for easy scripting
 from RC_Code import SonyRCKey
 from AppList import AppList
+
 
 # create an instance of the class, variables can be change
 tv = ActionScript()
@@ -27,6 +30,7 @@ print("Launch Amazon for 1 hour")
 print("Tune back to HDMI1 for 1 hour")
 print("Power OFF TV")
 
+start = input("Press Enter to start script")
 
 # Automation Start
 # ------------------------------- Hulu ----------------------------------
@@ -64,5 +68,5 @@ tv.wait_in_second(5)
 # RC OFF TV
 tv.press_rc_key(rc.POWER)
 
-# ------------------------------- Keep terminal open ---------------------------------
+# ------------------------- Keep terminal open -----------------------------
 close = input("Press Enter to close terminal")
