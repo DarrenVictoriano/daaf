@@ -23,14 +23,14 @@
 from tools.ADB_Action_Scipt import ActionScript
 # then import the RC keys and App PKGs for easy scripting
 from tools.RC_Code import SonyRCKey
-from tools.AppList import AppLists
+from tools.AppList import AppList
 ```
 * Second, Create an instalce of the classes
 ```
 # variables can be changed
 tv = ActionScript()
 rc = SonyRCKey()
-app = AppLists()
+app = AppList()
 ```
 * Check "Sample_Script.py" for an example
 
