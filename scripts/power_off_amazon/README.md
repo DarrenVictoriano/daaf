@@ -1,7 +1,11 @@
 # Power's OFF on HDMI Input
 
 Requirements:
-* Amazon, Netflix, Hulu and Vudu are signed in
+* HDMI1 with IR Blaster setup
+* Vudu is signed in
+* Amazon is signed in
+* Netflix is signed in
+* Hulu is signed in
 
 What is does:
 * Launch Hulu and play content for 1 hour

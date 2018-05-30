@@ -6,7 +6,8 @@ from AppList import AppList
 # include path for /tools folder
 import sys
 import os.path
-tool_dir = (os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')) + '/tools/')
+tool_dir = (os.path.abspath(
+            os.path.join(os.path.dirname(__file__), '..', '..')) + '/tools/')
 sys.path.append(tool_dir)
 
 # create an instance of the class, variables can be change
@@ -65,5 +66,5 @@ tv.wait_in_second(5)
 # RC OFF TV
 tv.press_rc_key(rc.POWER)
 
-# ------------------------------- Keep terminal open ---------------------------------
+# ------------------------- Keep terminal open -----------------------------
 close = input("Press Enter to close terminal")

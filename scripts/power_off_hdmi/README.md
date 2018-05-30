@@ -2,7 +2,10 @@
 
 Requirements:
 * HDMI1 with IR Blaster setup
-* Amazon, Netflix, Hulu and Vudu are signed in
+* Vudu is signed in
+* Amazon is signed in
+* Netflix is signed in
+* Hulu is signed in
 
 What is does:
 * Tune to HDMI1 for 1 hour while changing channels every 10 minutes
