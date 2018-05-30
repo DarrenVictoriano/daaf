@@ -30,6 +30,7 @@ print("Launch Amazon for 1 hour")
 print("Tune back to HDMI1 for 1 hour")
 print("Power OFF TV")
 
+start = input("Press Enter to start script")
 
 # Automation Start
 # ------------------------------- Hulu ----------------------------------
