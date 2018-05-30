@@ -30,7 +30,6 @@ print("Launch Amazon for 1 hour")
 print("Tune back to HDMI1 for 1 hour")
 print("Power OFF TV\n")
 
-print(tool_dir)
 
 start = input("Press Enter to start")
 

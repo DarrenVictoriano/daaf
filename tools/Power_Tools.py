@@ -68,3 +68,6 @@ def playback_hulu(time):
     tv.wait_in_second(5)  # wait load hulu
     tv.press_rc_key(rc.NAV_ENTER)
     tv.wait_in_hour(time)  # playback time
+
+
+print(tool_dir)

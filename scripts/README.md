@@ -13,7 +13,7 @@ How to use:
 * Create a folder inside /DAAF/scripts/
 * Your folder should contain the python script and a README.md file
 * README.md file is a text file that should contain the requirements and description of the script
-* Before writting your code; your script should have the following imports (use the xSample_Script.py as template):
+* Before writing your code; your script should have the following imports (see -=template=- folder):
 ```
 # include path for /tools folder
 import sys
