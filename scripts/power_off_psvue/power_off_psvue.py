@@ -36,7 +36,7 @@ print("Power OFF TV\n")
 start = input("Press Enter to start")
 
 # Automation Start
-pt.playback_netflix(1)
+pt.playback_netflix(45)
 
 # ----------------------- Keep terminal open -----------------------------
 close = input("Press Enter to close terminal")

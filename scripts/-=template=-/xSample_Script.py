@@ -9,6 +9,7 @@ from ADB_Action_Scipt import ActionScript
 # then import the RC keys and App PKGs for easy scripting
 from RC_Code import SonyRCKey
 from AppList import AppList
+import Power_Tools as pt
 
 # create an instance of the class, variables can be change
 tv = ActionScript()
@@ -34,7 +35,7 @@ print("Power OFF TV\n")
 start = input("Press Enter to start")
 
 # Automation Start
-
+pt.playback_netflix(2)
 
 # ----------------------- Keep terminal open -----------------------------
 close = input("Press Enter to close terminal")

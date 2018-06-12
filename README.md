@@ -55,10 +55,10 @@ Below are the core functions from the ActionScript() class.
 ___
 Below are the pre-made functions from the Power_Tools module for easy coding.
 
-**trickplay_hdmi(hdmi, time=10, loop=4)** - takes 3 arguments; 1st the HDMI input from RC_codes, then time in minutes and 3rd how many loops. This will tune to <HDMI> you set then change channel change every <time you set> and will repeat depending on how many <loop> you specify>
+**trickplay_hdmi(hdmi, time=10, loop=4)** - takes 3 arguments; 1st the HDMI input from RC_codes, then time in minutes and 3rd how many loops. This will tune to \<HDMI\> you set then change channel change every \<time you set\> and will repeat depending on how many \<loop\> you specify
 
-**playback_netflix(time)** - take 1 argument; playback time in minutes, it can me integer or floating point. This will launch Netflix, select 1st profile and play the 1st content it focuses and will continue playback depending on the <time> you set.
+**playback_netflix(time)** - take 1 argument; playback time in minutes, it can me integer or floating point. This will launch Netflix, select 1st profile and play the 1st content it focuses and will continue playback depending on the \<time\> you set.
 
-**playback_amazon(time)** - take 1 argument; playback time in minutes, it can me integer or floating point. This will launch Amazon, select 1st profile and play the 1st content it focuses and will continue playback depending on the <time> you set.
+**playback_amazon(time)** - take 1 argument; playback time in minutes, it can me integer or floating point. This will launch Amazon, select 1st profile and play the 1st content it focuses and will continue playback depending on the \<time\> you set.
 
-**playback_hulu(time)** - take 1 argument; playback time in minutes, it can me integer or floating point. This will launch Hulu, select 1st profile and play the 1st content it focuses and will continue playback depending on the <time> you set.
+**playback_hulu(time)** - take 1 argument; playback time in minutes, it can me integer or floating point. This will launch Hulu, select 1st profile and play the 1st content it focuses and will continue playback depending on the \<time\> you set.
