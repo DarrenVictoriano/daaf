@@ -35,13 +35,13 @@ start = input("Press Enter to start script")
 # Automation Start
 # ------------------------------- Hulu ----------------------------------
 tv.clear_launch_app(app.HULU_PKG, app.HULU_ACT)
-tv.wait_in_second(5)  # wait load hulu
+tv.wait_in_second(8)  # wait load hulu
 tv.press_rc_key(rc.ENTER)
 tv.wait_in_hour(1)  # playback time
 
 # ------------------------------- Netflix ---------------------------------
 tv.clear_launch_app(app.NETFLIX_PKG, app.NETFLIX_ACT)
-tv.wait_in_second(8)
+tv.wait_in_second(8)  # wait netflix to load
 tv.press_rc_key(rc.ENTER)
 tv.wait_in_second(2)
 tv.press_rc_key(rc.DOWN)
@@ -55,7 +55,7 @@ tv.wait_in_second(5)
 
 # ------------------------------- Amazon ---------------------------------
 tv.clear_launch_app(app.AMAZON_PKG, app.AMAZON_ACT)
-tv.wait_in_second(8)
+tv.wait_in_second(8)  # wait amazon to load
 tv.press_rc_key(rc.DOWN)
 tv.wait_in_second(1.5)
 tv.press_rc_key(rc.ENTER)

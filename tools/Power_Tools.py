@@ -21,7 +21,7 @@ app = AppList()
 def trickplay_hdmi(hdmi, time=10, loop=4):
     """Do channel change on HDMI"""
     tv.press_rc_key(hdmi)
-    tv.wait_in_second(5)
+    tv.wait_in_second(8)
     # channel up
     for i in range(1, loop):
         tv.press_rc_key(rc.CHANNEL_UP)
@@ -63,7 +63,7 @@ def playback_amazon(time):
 def playback_hulu(time):
     """Launch Hulu then playback content based on given time"""
     tv.clear_launch_app(app.HULU_PKG, app.HULU_ACT)
-    tv.wait_in_second(5)  # wait load hulu
+    tv.wait_in_second(8)  # wait load hulu
     tv.press_rc_key(rc.ENTER)
     tv.wait_in_minute(time)  # playback time
 

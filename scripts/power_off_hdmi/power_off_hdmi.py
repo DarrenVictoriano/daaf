@@ -35,7 +35,7 @@ start = input("Press Enter to start")
 # Automation Start
 # ------------------------------- HDMI1 ----------------------------------
 tv.press_rc_key(rc.HDMI1)
-tv.wait_in_second(5)
+tv.wait_in_second(8)
 # channel up
 for i in range(1, 4):
     tv.press_rc_key(rc.CHANNEL_UP)
@@ -75,7 +75,7 @@ tv.wait_in_second(5)
 
 # ------------------------------- HDMI1 ----------------------------------
 tv.press_rc_key(rc.HDMI1)
-tv.wait_in_second(5)
+tv.wait_in_second(8)
 # channel up
 for i in range(1, 4):
     tv.press_rc_key(rc.CHANNEL_UP)
