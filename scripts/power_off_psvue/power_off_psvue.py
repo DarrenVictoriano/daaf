@@ -33,7 +33,7 @@ print("Tune back to HDMI1 for 1 hour")
 print("Power OFF TV\n")
 
 
-# start = input("Press Enter to start")
+start = input("Press Enter to start")
 
 # Automation Start
 pt.playback_netflix(1)
