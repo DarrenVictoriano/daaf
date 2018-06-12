@@ -1,7 +1,8 @@
 # include path for /tools folder
 import sys
 import os.path
-tool_dir = (os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')) + '/tools/')
+tool_dir = (os.path.abspath(
+            os.path.join(os.path.dirname(__file__), '..', '..')) + '/tools/')
 sys.path.append(tool_dir)
 
 # First import the ADB_Action_Script.py it must be on the same folder
