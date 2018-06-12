@@ -1,13 +1,14 @@
-# First import the ADB_Action_Script.py it must be on the same folder
-from ADB_Action_Scipt import ActionScript
-# then import the RC keys and App PKGs for easy scripting
-from RC_Code import SonyRCKey
-from AppList import AppList
 # include path for /tools folder
 import sys
 import os.path
 tool_dir = (os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')) + '/tools/')
 sys.path.append(tool_dir)
+
+# First import the ADB_Action_Script.py it must be on the same folder
+from ADB_Action_Scipt import ActionScript
+# then import the RC keys and App PKGs for easy scripting
+from RC_Code import SonyRCKey
+from AppList import AppList
 
 # create an instance of the class, variables can be change
 tv = ActionScript()
@@ -70,4 +71,4 @@ def playback_hulu(time):
     tv.wait_in_hour(time)  # playback time
 
 
-print(tool_dir)
+print(f'tool dir: {tool_dir}')
