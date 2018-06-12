@@ -52,9 +52,8 @@ Below are the core functions from the ActionScript() class.
 
 **wait_in_hour(hours)** - takes one argument; any floating point numbers representing an "hour". This will pause the script base on the given time.
 
-
-Below are the pre-made functions from the Power_Tools module for easy coding.
 ___
+Below are the pre-made functions from the Power_Tools module for easy coding.
 
 **trickplay_hdmi(hdmi, time=10, loop=4)** - takes 3 arguments; 1st the HDMI input from RC_codes, then time in minutes and 3rd how many loops. This will tune to <HDMI> you set then change channel change every <time you set> and will repeat depending on how many <loop> you specify>
 
