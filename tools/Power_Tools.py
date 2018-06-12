@@ -45,9 +45,7 @@ def playback_netflix(time):
     tv.press_rc_key(rc.ENTER)
     tv.wait_in_second(1.5)
     tv.press_rc_key(rc.ENTER)
-    tv.wait_in_hour(time)  # playback time
-    tv.press_rc_key(rc.HOME)
-    tv.wait_in_second(5)
+    tv.wait_in_minute(time)  # playback time
 
 
 def playback_amazon(time):
@@ -59,9 +57,7 @@ def playback_amazon(time):
     tv.press_rc_key(rc.ENTER)
     tv.wait_in_second(1.5)
     tv.press_rc_key(rc.ENTER)
-    tv.wait_in_hour(time)  # playback time
-    tv.press_rc_key(rc.HOME)
-    tv.wait_in_second(5)
+    tv.wait_in_minute(time)  # playback time
 
 
 def playback_hulu(time):
@@ -69,7 +65,7 @@ def playback_hulu(time):
     tv.clear_launch_app(app.HULU_PKG, app.HULU_ACT)
     tv.wait_in_second(5)  # wait load hulu
     tv.press_rc_key(rc.ENTER)
-    tv.wait_in_hour(time)  # playback time
+    tv.wait_in_minute(time)  # playback time
 
 
 print(f'tool dir: {tool_dir}')
