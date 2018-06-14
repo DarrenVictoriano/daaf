@@ -26,4 +26,5 @@ from ADB_Action_Scipt import ActionScript
 # then import the RC keys and App PKGs for easy scripting
 from RC_Code import SonyRCKey
 from AppList import AppList
+import Power_Tools as pt
 ```
