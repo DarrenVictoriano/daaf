@@ -6,11 +6,11 @@
 * Check Documentation below.
 
 ### Requirements:
-* Python 3 installed
+* Python 3 installed and in the path
 * ADB installed and in the path
 * Android TV
 
-### How to use the scripts:
+### How to use the pre-made scripts:
 * Download or Clone Repository
 * Select the script you to run on /DAAF/script/
 * Read the each script's requirements
