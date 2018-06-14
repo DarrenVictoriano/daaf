@@ -1,9 +1,9 @@
 # Darren's AndroidTV Automation Framework
 
-### What is it?
+### What is it:
 * This is a basically an Android ADB shell commands automated using python.
 * Currently, the script only works on 1 device directly connected to the PC.
-* This only have 2 functions right now; launch an app and send remote keycodes to the TV
+* Check Documentation below.
 
 ### Requirements:
 * Python 3 installed
@@ -17,22 +17,25 @@
 * Run python script (double click ".py" file)
 
 ### Create your own:
-* First create a python file then import the following:
-```
-# First import the ADB_Action_Script.py it must be on the same folder
-from tools.ADB_Action_Scipt import ActionScript
-# then import the RC keys and App PKGs for easy scripting
-from tools.RC_Code import SonyRCKey
-from tools.AppList import AppList
-```
-* Second, Create an instalce of the classes
-```
-# variables can be changed
-tv = ActionScript()
-rc = SonyRCKey()
-app = AppList()
-```
-* Check "Sample_Script.py" for an example
+* Creating script inside "/DAAF/script" folder
+    * Navigate to "DAAF/script" folder and read the description.
+* Creating script on root directory "/DAAF"
+    * First create a python file then import the following:
+        ```
+        # First import the ADB_Action_Script.py it must be on the same folder
+        from tools.ADB_Action_Scipt import ActionScript
+        # then import the RC keys and App PKGs for easy scripting
+        from tools.RC_Code import SonyRCKey
+        from tools.AppList import AppList
+        ```
+    * Second, Create an instalce of the classes
+        ```
+        # variables can be changed
+        tv = ActionScript()
+        rc = SonyRCKey()
+        app = AppList()
+        ```
+    * Check "Sample_Script.py" for an example
 
 ## Documentation:
 Below are the core functions from the ActionScript() class.
