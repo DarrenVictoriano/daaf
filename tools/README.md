@@ -2,7 +2,6 @@
 
 What is it:
 * This is a basically an Android ADB shell commands automated using python.
-* Currently, the script only works on 1 device directly connected to the PC.
 * Check Documentation on "/DAAF/"
 
 Requirements:
