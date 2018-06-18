@@ -30,10 +30,18 @@
         ```
     * Second, Create an instance of the classes
         ```
-        # variables can be changed
+        # only 1 device connected
         tv = ActionScript()
         rc = SonyRCKey()
         app = AppList()
+
+        ```
+         ```
+        # if multiple device connected
+        tv = ActionScript("device ID or IP address")
+        rc = SonyRCKey()
+        app = AppList()
+
         ```
     * Check "Sample_Script.py" for an example
 * Note: the only difference between creating script from root directory and "/DAAF/script" folder is the import statement
