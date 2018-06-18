@@ -27,7 +27,7 @@
         from tools.RC_Code import SonyRCKey
         from tools.AppList import AppList
         ```
-    * Second, Create an instance of the classes
+    * Second, Create an instance of the classes...
         if there is only 1 device connected
         ```
         tv = ActionScript()
