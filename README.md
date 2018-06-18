@@ -76,7 +76,7 @@ Below are functions from **Power_Tools** module.
 **playback_hulu(time)** - take 1 argument; playback time in minutes, it can me integer or floating point. This will launch Hulu, select 1st profile and play the 1st content it focuses and will continue playback depending on the \<time\> you set.
 
 ___
-Below are the list of **SonyRCKey()**, Concatinate with RC instance to use it like "rc.POWER"
+Below are the list of **SonyRCKey()**, Concatinate with RC instance to use it. Example "rc.POWER"
 ```
 POWER - Press Power key
 INPUT - Press Inpout  key
@@ -140,4 +140,21 @@ HDMI2 - Tune to HDMI2
 HDMI3 - Tune to HDMI3
 HDMI4 - Tune to HDMI4
 VIDEO - Tune to Video
+```
+
+___
+Below are the list of **AppList()**, Concatinate with AppList instance to use it. Example "app.NETFLIX_PKG or app.NETFLIX_ACT"
+```
+NETFLIX_PKG - Netflix Package Name
+AMAZON_PKG - Amazon Package Name
+HULU_PKG - Hulu Package Name
+YOUTUBE_PKG - YouTube Package Name
+VUDU_PKG - Vudu Package Name
+```
+```
+NETFLIX_ACT -  Activity Name
+AMAZON_ACT -  Activity Name
+HULU_ACT -  Activity Name
+YOUTUBE_ACT -  Activity Name
+VUDU_ACT -  Activity Name
 ```
