@@ -150,11 +150,13 @@ AMAZON_PKG - Amazon Package Name
 HULU_PKG - Hulu Package Name
 YOUTUBE_PKG - YouTube Package Name
 VUDU_PKG - Vudu Package Name
+SETTINGS_PKG = Settings Package Name
 ```
 ```
-NETFLIX_ACT -  Activity Name
-AMAZON_ACT -  Activity Name
-HULU_ACT -  Activity Name
-YOUTUBE_ACT -  Activity Name
-VUDU_ACT -  Activity Name
+NETFLIX_ACT - Netflix Activity Name
+AMAZON_ACT - Amazon Activity Name
+HULU_ACT - Hulu Activity Name
+YOUTUBE_ACT - YouTube Activity Name
+VUDU_ACT - Vudu Activity Name
+SETTINGS_ACT = Settings Activity Name
 ```

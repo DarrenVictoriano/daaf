@@ -1,13 +1,20 @@
-# First import the ADB_Action_Script.py it must be on the same folder
-from DAAF.ADB_Action_Scipt import ActionScript
-# then import the RC keys and App PKGs for easy scripting
-from DAAF.ADB_Action_Scipt import SonyRCKey
-from DAAF.ADB_Action_Scipt import AppLists
+# include path for /tools folder
+import sys
+import os.path
+tool_dir = (os.path.abspath(
+            os.path.join(os.path.dirname(__file__), '..', '..')) + '/tools/')
+sys.path.append(tool_dir)
+
+# import the required tools
+from ADB_Action_Scipt import ActionScript
+from RC_Code import SonyRCKey
+from AppList import AppList
+import Power_Tools as pt  # Read Power_Tools Documentation for more info
 
 # create an instance of the class, variables can be change
 tv = ActionScript()
 rc = SonyRCKey()
-app = AppLists()
+app = AppList()
 
 # Script Instructions
 print("This will try to get the MainActivity of an app")
