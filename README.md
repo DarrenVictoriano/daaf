@@ -2,7 +2,6 @@
 
 ### What is it:
 * This is a basically an Android ADB shell commands automated using python.
-* Currently, the script only works on 1 device directly connected to the PC.
 * Check Documentation below.
 
 ### Requirements:
@@ -29,15 +28,15 @@
         from tools.AppList import AppList
         ```
     * Second, Create an instance of the classes
+        if there is only 1 device connected
         ```
-        # only 1 device connected
         tv = ActionScript()
         rc = SonyRCKey()
         app = AppList()
 
         ```
+        if multiple device connected, test specific device using device ID or ip address of the device
          ```
-        # if multiple device connected
         tv = ActionScript("device ID or IP address")
         rc = SonyRCKey()
         app = AppList()
