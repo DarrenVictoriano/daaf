@@ -82,7 +82,6 @@ Below are the list of RC keys. Concatinate with RC instance to use it like "rc.P
 **INPUT** - Press Inpout  key
 **BRAIVA_SYNC_MENU** - Press Sync Menu key
 **STB_MENU** - Press STB Menu key
-
 **NUMBER_0** - Press 0
 **NUMBER_1** - Press 1
 **NUMBER_2** - Press 2
@@ -94,7 +93,6 @@ Below are the list of RC keys. Concatinate with RC instance to use it like "rc.P
 **NUMBER_8** - Press 8
 **NUMBER_9** - Press 9
 **DOT** - Press (.)
-
 **GOOGLE_PLAY** - Press Google Play key
 **NETFLIX** - Press Netflix key
 **YOUTUBE** - Press YouTube key
@@ -102,27 +100,23 @@ Below are the list of RC keys. Concatinate with RC instance to use it like "rc.P
 **BLUE** - Press Blue key
 **RED** - Press Red key
 **GREEN** - Press Green key
-
 **ACTION_MENU** - Press Action Menu key
 **GUIDE** - Press Guide key
 **APPS** - Press Apps key
 **BACK** - Press Back key
 **HOME** - Press Home key
 **TV** - Press TV key
-
 **UP** - Press Up key
 **DOWN** - Press Down key
 **LEFT** - Press Left key
 **RIGHT** - Press Right key
 **ENTER** - Press Enter key
-
 **VOLUME_UP** - Press Volume Up key
 **VOLUME_DOWN** - Press Volume Down key
 **JUMP** - Press Jump key
 **MUTE** - Press Mute key
 **CHANNEL_UP** - Press Channel Up key
 **CHANNEL_DOWN** - Press Channel Down key
-
 **AUDIO** - Press Audio key
 **FF** - Press Fast Forward key
 **PLAY** - Press Play key
@@ -134,7 +128,6 @@ Below are the list of RC keys. Concatinate with RC instance to use it like "rc.P
 **HELP** - Press Help key
 **WIDE** - Press Wide Mode key
 **STOP** - Press Stop key
-
 **HDMI1** - Tune to HDMI1
 **HDMI2** - Tune to HDMI2
 **HDMI3** - Tune to HDMI3
