@@ -27,16 +27,17 @@
         from tools.RC_Code import SonyRCKey
         from tools.AppList import AppList
         ```
-    * Second, Create an instance of the classes...
-        if there is only 1 device connected
+    * Second, Create an instance of the classes.
         ```
+        # if there is only 1 device connected
         tv = ActionScript()
         rc = SonyRCKey()
         app = AppList()
 
         ```
         if multiple device connected, test specific device using device ID or ip address of the device
-         ```
+        ```
+        # device ID or IP address should be inside a quotation
         tv = ActionScript("device ID or IP address")
         rc = SonyRCKey()
         app = AppList()
