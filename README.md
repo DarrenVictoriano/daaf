@@ -65,6 +65,8 @@ Below are the core functions from the **ActionScript()** class. Following the im
 
 **wait_in_hour(hours)** - takes one argument; any floating point numbers representing an "hour". This will pause the script base on the given time.
 
+**get_activity_mfocus() - this will print the package and activity of the app in the terminal, first launch the app on the TV then run the get_activity.py
+
 ___
 Below are functions from **Power_Tools** module. Example "*pt.trickplay_hdmi(rc.HDMI1, 5, 2)*"
 
@@ -153,7 +155,8 @@ AMAZON_PKG - Amazon Package Name
 HULU_PKG - Hulu Package Name
 YOUTUBE_PKG - YouTube Package Name
 VUDU_PKG - Vudu Package Name
-SETTINGS_PKG = Settings Package Name
+SETTINGS_PKG - Settings Package Name
+PSVUE_PKG - PS Vue Package Name
 ```
 ```
 NETFLIX_ACT - Netflix Activity Name
@@ -161,5 +164,6 @@ AMAZON_ACT - Amazon Activity Name
 HULU_ACT - Hulu Activity Name
 YOUTUBE_ACT - YouTube Activity Name
 VUDU_ACT - Vudu Activity Name
-SETTINGS_ACT = Settings Activity Name
+SETTINGS_ACT - Settings Activity Name
+PSVUE_ACT - PS Vue Activity Name
 ```

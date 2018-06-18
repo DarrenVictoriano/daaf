@@ -19,3 +19,6 @@ app = AppList()
 # Script Instructions
 print("This will try to get the MainActivity of an app")
 tv.get_activity_mfocus()
+
+# ----------------------- Keep terminal open -----------------------------
+close = input("Press Enter to close terminal")
