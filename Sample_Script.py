@@ -24,11 +24,13 @@ print("Launch Amazon for 1 hour")
 print("Tune back to HDMI1 for 1 hour")
 print("Power OFF TV\n")
 
+print(tv.deviceID)
+
 start = input("Press Enter to start")
 
 # Automation Start
 # ------------------------------- HDMI1 ----------------------------------
-tv.press_rc_key(rc.TUNE_HDMI1)
+tv.press_rc_key(rc.HDMI1)
 tv.wait_in_second(5)
 # channel up
 for i in range(1, 4):

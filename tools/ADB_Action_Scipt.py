@@ -5,6 +5,9 @@ import time
 class ActionScript:
     """This is an ADB shell action script framework"""
 
+    def __init__(self, deviceID="none"):
+        self.deviceID = deviceID
+
     @staticmethod
     def __execute_cmd(adb):
         """this will send the command to the shell"""
@@ -16,8 +19,11 @@ class ActionScript:
 
     def send_adb(self, cmd):
         """compose the command as an adb shell command"""
-        # adb -s {device} {cmd}'.split(" ") for specific device
-        return self.__execute_cmd(f'adb {cmd}'.split(" "))
+        if self.deviceID == "none":
+            return self.__execute_cmd(f'adb {cmd}'.split(" "))
+        else:
+            return self.__execute_cmd(f'adb -s {self.deviceID} {cmd}'.split(" "))
+            # adb -s {device} {cmd}'.split(" ") for specific device
 
     def launch_app(self, app_pkg):
         """Launch the app_pkg via adb using monkey command"""

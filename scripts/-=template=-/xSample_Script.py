@@ -12,7 +12,7 @@ from AppList import AppList
 import Power_Tools as pt
 
 # create an instance of the class, variables can be change
-tv = ActionScript()
+tv = ActionScript()  # if more than 1 device use: tv = ActionScript("Device ID")
 rc = SonyRCKey()
 app = AppList()
 
