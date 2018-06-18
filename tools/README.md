@@ -3,7 +3,7 @@
 What is it:
 * This is a basically an Android ADB shell commands automated using python.
 * Currently, the script only works on 1 device directly connected to the PC.
-* This only have 2 functions right now; launch an app and send remote keycodes to the TV
+* Check Documentation on "/DAAF/"
 
 Requirements:
 * Python 3 installed

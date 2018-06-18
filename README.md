@@ -28,7 +28,7 @@
         from tools.RC_Code import SonyRCKey
         from tools.AppList import AppList
         ```
-    * Second, Create an instalce of the classes
+    * Second, Create an instance of the classes
         ```
         # variables can be changed
         tv = ActionScript()
