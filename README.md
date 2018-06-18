@@ -47,6 +47,7 @@
 * Note: the only difference between creating script from root directory and "/DAAF/script" folder is the import statement
 
 ## Documentation:
+#### ActionScript() class
 Below are the core functions from the ActionScript() class.
 
 **launch_app(app_pkg)** - takes one argument; the application's package you want to launch. This will launch the app using monkey tool. Does not force stop the app, it will resume previous activity if the app had been launch before.
@@ -65,7 +66,8 @@ Below are the core functions from the ActionScript() class.
 **wait_in_hour(hours)** - takes one argument; any floating point numbers representing an "hour". This will pause the script base on the given time.
 
 ___
-### Power_Tools module for easy coding:
+#### Power_Tools module for easy coding:
+This are functions that does a series of steps on each app
 
 **trickplay_hdmi(hdmi, time=10, loop=4)** - takes 3 arguments; 1st the HDMI input from RC_codes, then time in minutes and 3rd how many loops. This will tune to \<HDMI\> you set then change channel change every \<time you set\> and will repeat depending on how many \<loop\> you specify
 
