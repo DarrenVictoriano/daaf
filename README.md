@@ -68,13 +68,15 @@ Below are the core functions from the **ActionScript()** class. Following the im
 ___
 Below are functions from **Power_Tools** module. Example "*pt.trickplay_hdmi(rc.HDMI1, 5, 2)*"
 
-**trickplay_hdmi(hdmi, time=10, loop=4)** - takes 3 arguments; 1st the HDMI input from RC_codes, then time in minutes and 3rd how many loops. This will tune to \<HDMI\> you set then change channel change every \<time you set\> and will repeat depending on how many \<loop\> you specify
-
 **playback_netflix(time)** - take 1 argument; playback time in minutes, it can me integer or floating point. This will launch Netflix, select 1st profile and play the 1st content it focuses and will continue playback depending on the \<time\> you set.
 
 **playback_amazon(time)** - take 1 argument; playback time in minutes, it can me integer or floating point. This will launch Amazon, select 1st profile and play the 1st content it focuses and will continue playback depending on the \<time\> you set.
 
 **playback_hulu(time)** - take 1 argument; playback time in minutes, it can me integer or floating point. This will launch Hulu, select 1st profile and play the 1st content it focuses and will continue playback depending on the \<time\> you set.
+
+**trickplay_hdmi(hdmi, time=10, loop=4)** - takes 3 arguments; 1st the HDMI input from RC_codes, then time in minutes and 3rd how many loops. This will tune to \<HDMI\> you set then change channel change every \<time you set\> and will repeat depending on how many \<loop\> you specify. (Default value of 10min and 4 loops)
+
+**trickplay_psvue(time=10, loop=4)** - takes 2 arguments; time in minutes and how many loops. This will launch PS Vue then change channel change every \<time you set\> and will repeat depending on how many \<loop\> you specify. (Default value of 10min and 4 loops)
 
 ___
 Below are the list of **SonyRCKey()**, Concatinate with RC instance to use it. Example "*rc.POWER*"
