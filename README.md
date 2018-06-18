@@ -26,6 +26,7 @@
         # then import the RC keys and App PKGs for easy scripting
         from tools.RC_Code import SonyRCKey
         from tools.AppList import AppList
+        import Power_Tools as pt
         ```
     * Second, Create an instance of the classes.
         ```
@@ -47,7 +48,7 @@
 * Note: the only difference between creating script from root directory and "/DAAF/script" folder is the import statement
 
 ## Documentation:
-Below are the core functions from the **ActionScript()** class.
+Below are the core functions from the **ActionScript()** class. Following the imports above this is how to use the ActionScript() class; example "*tv.launch_app(app.NETFLIX_PKG)*"
 
 **launch_app(app_pkg)** - takes one argument; the application's package you want to launch. This will launch the app using monkey tool. Does not force stop the app, it will resume previous activity if the app had been launch before.
 *(you can get the app's pkg from AppLists() class)*
@@ -65,7 +66,7 @@ Below are the core functions from the **ActionScript()** class.
 **wait_in_hour(hours)** - takes one argument; any floating point numbers representing an "hour". This will pause the script base on the given time.
 
 ___
-Below are functions from **Power_Tools** module.
+Below are functions from **Power_Tools** module. Example "*pt.trickplay_hdmi(rc.HDMI1, 5, 2)*"
 
 **trickplay_hdmi(hdmi, time=10, loop=4)** - takes 3 arguments; 1st the HDMI input from RC_codes, then time in minutes and 3rd how many loops. This will tune to \<HDMI\> you set then change channel change every \<time you set\> and will repeat depending on how many \<loop\> you specify
 
@@ -76,7 +77,7 @@ Below are functions from **Power_Tools** module.
 **playback_hulu(time)** - take 1 argument; playback time in minutes, it can me integer or floating point. This will launch Hulu, select 1st profile and play the 1st content it focuses and will continue playback depending on the \<time\> you set.
 
 ___
-Below are the list of **SonyRCKey()**, Concatinate with RC instance to use it. Example "rc.POWER"
+Below are the list of **SonyRCKey()**, Concatinate with RC instance to use it. Example "*rc.POWER*"
 ```
 POWER - Press Power key
 INPUT - Press Inpout  key
@@ -143,7 +144,7 @@ VIDEO - Tune to Video
 ```
 
 ___
-Below are the list of **AppList()**, Concatinate with AppList instance to use it. Example "app.NETFLIX_PKG or app.NETFLIX_ACT"
+Below are the list of **AppList()**, Concatinate with AppList instance to use it. Example "*app.NETFLIX_PKG or app.NETFLIX_ACT*"
 ```
 NETFLIX_PKG - Netflix Package Name
 AMAZON_PKG - Amazon Package Name

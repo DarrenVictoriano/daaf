@@ -9,7 +9,7 @@ sys.path.append(tool_dir)
 from ADB_Action_Scipt import ActionScript
 from RC_Code import SonyRCKey
 from AppList import AppList
-import Power_Tools as pt  # this is for pre-made functions. read Documentation for more info
+import Power_Tools as pt  # read Documentation for more info
 
 # create an instance of the class, variables can be change
 tv = ActionScript()  # if more than 1 device use: tv = ActionScript("Device ID")
