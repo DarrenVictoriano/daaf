@@ -65,7 +65,7 @@ Below are the core functions from the **ActionScript()** class. Following the im
 
 **wait_in_hour(hours)** - takes one argument; any floating point numbers representing an "hour". This will pause the script base on the given time.
 
-**get_activity_mfocus() - this will print the package and activity of the app in the terminal, first launch the app on the TV then run the get_activity.py
+**get_activity_mfocus()** - this will print the package and activity of the app in the terminal, first launch the app on the TV then run the get_activity.py
 
 ___
 Below are functions from **Power_Tools** module. Example "*pt.trickplay_hdmi(rc.HDMI1, 5, 2)*"
