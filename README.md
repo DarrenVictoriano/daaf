@@ -74,3 +74,69 @@ Below are functions from **Power_Tools** module.
 **playback_amazon(time)** - take 1 argument; playback time in minutes, it can me integer or floating point. This will launch Amazon, select 1st profile and play the 1st content it focuses and will continue playback depending on the \<time\> you set.
 
 **playback_hulu(time)** - take 1 argument; playback time in minutes, it can me integer or floating point. This will launch Hulu, select 1st profile and play the 1st content it focuses and will continue playback depending on the \<time\> you set.
+
+___
+Below are the list of RC keys. Concatinate with RC instance to use it like "rc.POWER"
+
+**POWER** - Press Power key
+**INPUT** - Press Inpout  key
+**BRAIVA_SYNC_MENU** - Press Sync Menu key
+**STB_MENU** - Press STB Menu key
+**** - Press
+**NUMBER_0** - Press 0
+**NUMBER_1** - Press 1
+**NUMBER_2** - Press 2
+**NUMBER_3** - Press 3
+**NUMBER_4** - Press 4
+**NUMBER_5** - Press 5
+**NUMBER_6** - Press 6
+**NUMBER_7** - Press 7
+**NUMBER_8** - Press 8
+**NUMBER_9** - Press 9
+**DOT** - Press (.)
+**** - Press
+**GOOGLE_PLAY** - Press Google Play key
+**NETFLIX** - Press Netflix key
+**YOUTUBE** - Press YouTube key
+**YELLOW** - Press Yellow key
+**BLUE** - Press Blue key
+**RED** - Press Red key
+**GREEN** - Press Green key
+**** - Press
+**ACTION_MENU** - Press Action Menu key
+**GUIDE** - Press Guide key
+**APPS** - Press Apps key
+**BACK** - Press Back key
+**HOME** - Press Home key
+**TV** - Press TV key
+**** - Press
+**UP** - Press Up key
+**DOWN** - Press Down key
+**LEFT** - Press Left key
+**RIGHT** - Press Right key
+**ENTER** - Press Enter key
+**** - Press
+**VOLUME_UP** - Press Volume Up key
+**VOLUME_DOWN** - Press Volume Down key
+**JUMP** - Press Jump key
+**MUTE** - Press Mute key
+**CHANNEL_UP** - Press Channel Up key
+**CHANNEL_DOWN** - Press Channel Down key
+**** - Press
+**AUDIO** - Press Audio key
+**FF** - Press Fast Forward key
+**PLAY** - Press Play key
+**RW** - Press Rewind key
+**SUBTITLE** - Press CC/Close caption key
+**PREV** - Press Previous key
+**PAUSE** - Press Pause key
+**NEXT** - Press Next key
+**HELP** - Press Help key
+**WIDE** - Press Wide Mode key
+**STOP** - Press Stop key
+**** - Press
+**HDMI1** - Tune to HDMI1
+**HDMI2** - Tune to HDMI2
+**HDMI3** - Tune to HDMI3
+**HDMI4** - Tune to HDMI4
+**VIDEO** - Tune to Video
