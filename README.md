@@ -70,15 +70,25 @@ Below are the core functions from the **ActionScript()** class. Following the im
 ___
 Below are functions from **Power_Tools** module. Example "*pt.trickplay_hdmi(rc.HDMI1, 5, 2)*"
 
-**playback_netflix(time)** - take 1 argument; playback time in minutes, it can me integer or floating point. This will launch Netflix, select 1st profile and play the 1st content it focuses and will continue playback depending on the \<time\> you set.
+**playback_hdmi(hdmi, time=0)** - takes 2 arguments first the HDMI input from RC_codes, then playback time in minutes. This will tune to \<HDMI\> you set then playback content for \<time you set\>
 
-**playback_amazon(time)** - take 1 argument; playback time in minutes, it can me integer or floating point. This will launch Amazon, select 1st profile and play the 1st content it focuses and will continue playback depending on the \<time\> you set.
+**trickplay_hdmi(time=2, loop=4)** - takes 2 arguments; playback time in minutes and how many loops does the channel change do. This will channel up and down for \<loop you set\>. (Default value of 10min and 4 loops) NOTE: this requires the playback_hdmi() to run first.
 
-**playback_hulu(time)** - take 1 argument; playback time in minutes, it can me integer or floating point. This will launch Hulu, select 1st profile and play the 1st content it focuses and will continue playback depending on the \<time\> you set.
+**playback_netflix(time=0)** - take 1 argument; playback time in minutes, it can me integer or floating point. This will launch Netflix, select first profile and play the first content it focuses and will continue playback depending on the \<time\> you set.
 
-**trickplay_hdmi(hdmi, time=10, loop=4)** - takes 3 arguments; 1st the HDMI input from RC_codes, then time in minutes and 3rd how many loops. This will tune to \<HDMI\> you set then change channel change every \<time you set\> and will repeat depending on how many \<loop\> you specify. (Default value of 10min and 4 loops)
+**trickplay_netflix(time=2, speed=6)** - takes 2 argument; first the playback time in minutes and the trick play speed, default value is 6. On Netflix trickplay speed is 10 frame/second per second. This will FF for \<speed specify\>and Play for \<time specified\> then RW for \<speed specify\>and Play for \<time specified\>. NOTE: this requires the playback_netflix() to run first.
 
-**trickplay_psvue(time=10, loop=4)** - takes 2 arguments; time in minutes and how many loops. This will launch PS Vue then change channel change every \<time you set\> and will repeat depending on how many \<loop\> you specify. (Default value of 10min and 4 loops)
+**playback_amazon(time)** - take 1 argument; playback time in minutes, it can me integer or floating point. This will launch Amazon, select first profile and play the first content it focuses and will continue playback depending on the \<time\> you set.
+
+**trickplay_amazon(time=2, speed=2)** - takes 2 argument; first the playback time in minutes and the trick play speed, default value is 2. On Amazon trickplay speed is 40 frame/second per second. This will FF for \<speed specify\>and Play for \<time specified\> then RW for \<speed specify\>and Play for \<time specified\>. NOTE: this requires the playback_amazon() to run first.
+
+**playback_hulu(time)** - take 1 argument; playback time in minutes, it can me integer or floating point. This will launch Hulu, select first profile and play the first content it focuses and will continue playback depending on the \<time\> you set.
+
+**trickplay_hulu(time=2, speed=10)** - takes 2 argument; first the playback time in minutes and the trick play speed, default value is 10. On Hulu trickplay speed is 10 frame/second per key press. This will FF for \<speed specify\>and Play for \<time specified\> then RW for \<speed specify\>and Play for \<time specified\>. NOTE: this requires the playback_hulu() to run first.
+
+**playback_psvue(time=0)** - take 1 argument; playback time in minutes, it can me integer or floating point. This will launch PS Vue, select first profile and play content and will continue playback depending on the \<time\> you set. 
+
+**trickplay_psvue(time=10, loop=4)** - takes 2 argument; first the playback time in minutes and the channel change loop, default value is 4. This will CH Up then Play for \<time specified\> and repeat depending on \<loop specify\> and then CH Down then Play for \<time specified\> and repeat depending on \<loop specify\>. NOTE: this requires the playback_hulu() to run first.
 
 ___
 Below are the list of **SonyRCKey()**, Concatinate with RC instance to use it. Example "*rc.POWER*"
