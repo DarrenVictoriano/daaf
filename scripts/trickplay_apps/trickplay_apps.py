@@ -35,7 +35,7 @@ print("Do trickplay every 5 minutes")
 start = input("Press Enter to start")
 
 # Automation Start
-pt.playback_netflix()
+pt.trickplay_netflix(5, 6)
 
 
 # ----------------------- Keep terminal open -----------------------------
