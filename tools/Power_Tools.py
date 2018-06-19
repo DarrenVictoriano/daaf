@@ -16,6 +16,8 @@ tv = ActionScript()
 rc = SonyRCKey()
 app = AppList()
 
+# ---------------------------Pre-built Functions Settings--------------------------
+
 
 # ---------------------------Pre-built Functions HDMI--------------------------
 def playback_hdmi(hdmi, time=0):
@@ -24,9 +26,9 @@ def playback_hdmi(hdmi, time=0):
     tv.wait_in_minute(time)  # wait to load hdmi
 
 
-def trickplay_hdmi(hdmi, time=10, loop=4):
+def trickplay_hdmi(time=2, loop=4):
     """Do channel change on HDMI with default value of 10min and 4 loops"""
-    playback_hdmi(hdmi, time)
+    # requires playback_hdmi to run 1st
     # channel up
     for i in range(0, loop):
         tv.press_rc_key(rc.CHANNEL_UP)
@@ -54,19 +56,19 @@ def playback_netflix(time=0):
     tv.wait_in_minute(time)  # playback time
 
 
-def trickplay_netflix(playback=2, speed=6):
+def trickplay_netflix(time=2, speed=6):
     """ FF and RW speed is 10 seconds per second """
-    playback_netflix()
-    # trickplay starts
-    tv.wait_in_minute(playback)
+    # requires playback_netflix to run 1st
+    # trickplay starts FF
     tv.press_rc_key(rc.FF)
     tv.wait_in_second(speed)  # trickplay time
     tv.press_rc_key(rc.ENTER)
-    tv.wait_in_minute(playback)  # playback time
+    tv.wait_in_minute(time)  # playback time
+    # trickplay starts RW
     tv.press_rc_key(rc.RW)
     tv.wait_in_second(speed)  # trickplay time
     tv.press_rc_key(rc.ENTER)
-    tv.wait_in_minute(playback)  # playback time
+    tv.wait_in_minute(time)  # playback time
 
 
 # ---------------------------Pre-built Functions Amazon--------------------------
@@ -82,17 +84,57 @@ def playback_amazon(time=0):
     tv.wait_in_minute(time)  # playback time
 
 
+def trickplay_amazon(time=2, speed=2):
+    """FF and RW speed x2 is 40 seconds per second"""
+    # requires playback_amazon to run 1st
+    # trickplay start FF
+    tv.press_rc_key(rc.FF)
+    tv.wait_in_second(1)
+    tv.press_rc_key(rc.FF)
+    tv.wait_in_second(speed)  # speed time
+    tv.press_rc_key(rc.PLAY)
+    tv.wait_in_minute(time)  # playback time
+    # trickplay start RW
+    tv.press_rc_key(rc.RW)
+    tv.wait_in_second(1)
+    tv.press_rc_key(rc.RW)
+    tv.wait_in_second(speed)  # speed time
+    tv.press_rc_key(rc.PLAY)
+    tv.wait_in_minute(time)  # playback time
+
+
 # ---------------------------Pre-built Functions Hulu--------------------------
 def playback_hulu(time=0):
     """Launch Hulu then playback content based on given time"""
     tv.clear_launch_app(app.HULU_PKG, app.HULU_ACT)
     tv.wait_in_second(10)  # wait load hulu
+    tv.press_rc_key(rc.DOWN)
+    tv.wait_in_second(1)
+    tv.press_rc_key(rc.DOWN)
+    tv.wait_in_second(1)
+    tv.press_rc_key(rc.ENTER)
+    tv.wait_in_second(1)
+    tv.press_rc_key(rc.ENTER)
+    tv.wait_in_minute(time)  # playback time
+
+
+def trickplay_hulu(time=2, speed=10):
+    """FF and RW speed is 10 seconds per RC press"""
+    # requires playback_hulu to run 1st
+    # trickplay start FF
+    for i in range(0, speed):  # speed
+        tv.press_rc_key(rc.RIGHT)
+    tv.press_rc_key(rc.ENTER)
+    tv.wait_in_minute(time)  # playback time
+    # trickplay start TW
+    for i in range(0, speed):  # speed
+        tv.press_rc_key(rc.LEFT)
     tv.press_rc_key(rc.ENTER)
     tv.wait_in_minute(time)  # playback time
 
 
 # ---------------------------Pre-built Functions PSVue--------------------------
-def playback_psvue(time=3):
+def playback_psvue(time=0):
     """Launch PSVue then playback content based on given time"""
     tv.clear_launch_app(app.PSVUE_PKG, app.PSVUE_ACT)
     tv.wait_in_second(10)  # wait to load psvue
@@ -102,9 +144,9 @@ def playback_psvue(time=3):
     tv.wait_in_minute(time)  # playback time
 
 
-def trickplay_psvue(time=10, loop=4):
+def trickplay_psvue(time=2, loop=4):
     """Do channel change on PS Vue with default value of 10min and 4 loops"""
-    playback_psvue()
+    # requires playback_psvue to run 1st
     # channel up loop
     for i in range(0, loop):
         tv.press_rc_key(rc.CHANNEL_UP)
