@@ -18,7 +18,7 @@ app = AppList()
 
 
 # ---------------------------Pre-built Functions playback--------------------------
-def playback_netflix(time):
+def playback_netflix(time=0):
     """Launch Netflix then playback content based on given time"""
     tv.clear_launch_app(app.NETFLIX_PKG, app.NETFLIX_ACT)
     tv.wait_in_second(10)  # Wait load netflix
@@ -32,7 +32,7 @@ def playback_netflix(time):
     tv.wait_in_minute(time)  # playback time
 
 
-def playback_amazon(time):
+def playback_amazon(time=0):
     """Launch Amazon then playback content based on given time"""
     tv.clear_launch_app(app.AMAZON_PKG, app.AMAZON_ACT)
     tv.wait_in_second(10)  # wait load amazon
@@ -44,7 +44,7 @@ def playback_amazon(time):
     tv.wait_in_minute(time)  # playback time
 
 
-def playback_hulu(time):
+def playback_hulu(time=0):
     """Launch Hulu then playback content based on given time"""
     tv.clear_launch_app(app.HULU_PKG, app.HULU_ACT)
     tv.wait_in_second(10)  # wait load hulu

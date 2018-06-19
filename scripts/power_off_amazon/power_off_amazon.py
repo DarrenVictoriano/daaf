@@ -9,7 +9,7 @@ sys.path.append(tool_dir)
 from ADB_Action_Scipt import ActionScript
 from RC_Code import SonyRCKey
 from AppList import AppList
-import Power_Tools as pt  # this is for pre-made functions. read Documentation for more info
+import Power_Tools as pt  # read Documentation for more info
 
 # create an instance of the class, variables can be change
 tv = ActionScript()  # if more than 1 device use: tv = ActionScript("Device ID")
@@ -49,7 +49,7 @@ tv.wait_in_second(1.5)
 tv.press_rc_key(rc.ENTER)
 tv.wait_in_second(1.5)
 tv.press_rc_key(rc.ENTER)  # playback start
-tv.wait_in_minute(1)
+tv.wait_in_hour(1)
 tv.press_rc_key(rc.HOME)
 tv.wait_in_second(5)
 
@@ -61,7 +61,7 @@ tv.wait_in_second(1.5)
 tv.press_rc_key(rc.ENTER)
 tv.wait_in_second(1.5)
 tv.press_rc_key(rc.ENTER)  # playback start
-tv.wait_in_second(5)
+tv.wait_in_hour(1)
 tv.press_rc_key(rc.HOME)
 tv.wait_in_second(5)
 
