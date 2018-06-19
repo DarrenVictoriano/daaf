@@ -24,19 +24,38 @@ print("Hulu is signed in")
 
 # Print Instructions
 print("What is does:")
-print("Launch Netflix and play content")
-print("Do trickplay every 5 minutes")
-print("Launch Amazon and play content")
-print("Do trickplay every 5 minutes")
-print("Launch Hulu and play content")
-print("Do trickplay every 5 minutes")
+print("1. Launch Netflix and play content")
+print("2. Do trickplay every 5 minutes")
+print("3. Launch Amazon and play content")
+print("4. Do trickplay every 5 minutes")
+print("5. Launch Hulu and play content")
+print("6. Do trickplay every 5 minutes")
+print("Then repeat step 1 for as many loop as you enter")
+print("Then power off TV")
 
 
-start = input("Press Enter to start")
+start = input("Please enter how many loops you want: ")
 
 # Automation Start
-pt.trickplay_netflix(5, 6)
+for x in range(1, int(start)):
+    pt.playback_netflix(5)
+    for i in range(0, 6):
+        pt.trickplay_netflix(5, 6)
+        tv.wait_in_minute(5)
 
+    pt.playback_amazon(5)
+    for i in range(0, 6):
+        pt.trickplay_amazon(5, 2)
+        tv.wait_in_minute(5)
+
+    pt.playback_hulu(5)
+    for i in range(0, 6):
+        pt.trickplay_hulu(5, 10)
+        tv.wait_in_minute(5)
+
+    print(f'loop count: {x}')
+
+tv.press_rc_key(rc.POWER)
 
 # ----------------------- Keep terminal open -----------------------------
 close = input("Press Enter to close terminal")
