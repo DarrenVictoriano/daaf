@@ -108,7 +108,8 @@ NUMBER_6 - Press 6
 NUMBER_7 - Press 7
 NUMBER_8 - Press 8
 NUMBER_9 - Press 9
-DOT - Press (.)
+DOT - Press (.) Key
+DISPLAY - Press Display Key
 
 GOOGLE_PLAY - Press Google Play key
 NETFLIX - Press Netflix key
