@@ -35,10 +35,15 @@ print("Power OFF TV\n")
 start = input("Press Enter to start")
 
 # Automation Start
-pt.trickplay_hdmi(rc.HDMI1)
-pt.playback_netflix(1)
-pt.playback_amazon(1)
-pt.trickplay_psvue()
+pt.playback_hdmi(rc.HDMI1, 10)  # let playback for 10 minutes
+pt.trickplay_hdmi(10, 3)  # then trickplay every 10minutes for 1 hour
+
+pt.playback_netflix(60)
+pt.playback_amazon(60)
+
+pt.playback_psvue(10)
+pt.trickplay_psvue(10, 3)
+
 tv.press_rc_key(rc.POWER)
 
 # ----------------------- Keep terminal open -----------------------------
