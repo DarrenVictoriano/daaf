@@ -32,10 +32,13 @@ print("Tune to PS Vue for 1 hour")
 print("Then change channel every 10 minutes")
 print("Power OFF TV\n")
 
-start = input("Press Enter to start")
+print("What HDMI input your IRB is setup?")
+hdmiInput = input("Enter number: 1, 2, 3 or 4: ")
 
 # Automation Start
-pt.playback_hdmi(rc.HDMI1, 10)  # let playback for 10 minutes
+rcHDMI = pt.select_hdmi_input(hdmiInput)
+
+pt.playback_hdmi(rcHDMI, 10)  # let playback for 10 minutes
 pt.trickplay_hdmi(10, 3)  # then trickplay every 10minutes for 1 hour
 
 pt.playback_netflix(60)

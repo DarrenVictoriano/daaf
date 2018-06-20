@@ -41,6 +41,22 @@ def trickplay_hdmi(time=2, loop=4):
         print(f'CHANNEL DOWN loop count: {i}')
 
 
+def select_hdmi_input(hdmi):
+    """Select HDMI Input you want to test"""
+    if hdmi == '1':
+        return rc.HDMI1
+    elif hdmi == '2':
+        return rc.HDMI2
+    elif hdmi == '3':
+        return rc.HDMI3
+    elif hdmi == '4':
+        return rc.HDMI4
+    else:
+        print("Invalid argurment, please enter str 1, 2, 3 or 4")
+        print("Launching HDMI1 as default")
+        return rc.HDMI1
+
+
 # ---------------------------Pre-built Functions Netflix--------------------------
 def playback_netflix(time=0):
     """Launch Netflix then playback content based on given time"""
