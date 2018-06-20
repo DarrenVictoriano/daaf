@@ -74,6 +74,8 @@ Below are functions from **Power_Tools** module. Example "*pt.trickplay_hdmi(rc.
 
 **trickplay_hdmi(time=2, loop=4)** - takes 2 arguments; playback time in minutes and how many loops does the channel change do. This will channel up and down for \<loop you set\>. (Default value of 10min and 4 loops) NOTE: this requires the playback_hdmi() to run first.
 
+**select_hdmi_input(hdmi)** - take 1 arguement; a string of either 1, 2, 3 or 4 representing the HDMI input the user wants to test. 
+
 **playback_netflix(time=0)** - take 1 argument; playback time in minutes, it can me integer or floating point. This will launch Netflix, select first profile and play the first content it focuses and will continue playback depending on the \<time\> you set.
 
 **trickplay_netflix(time=2, speed=6)** - takes 2 argument; first the playback time in minutes and the trick play speed, default value is 6. On Netflix trickplay speed is 10 frame/second per second. This will FF for \<speed specify\>and Play for \<time specified\> then RW for \<speed specify\>and Play for \<time specified\>. NOTE: this requires the playback_netflix() to run first.
