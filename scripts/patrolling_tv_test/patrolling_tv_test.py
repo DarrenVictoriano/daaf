@@ -39,7 +39,7 @@ start = input("Press Enter to start")
 # Automation Start
 # ----------------------- TV Input Test -----------------------------
 # Tune to RF
-pt.playback_rf(1)
+pt.playback_rf(1, 6)
 pt.volume_change(1, 4)
 pt.trickplay_hdmi(1, 3)
 
@@ -59,13 +59,14 @@ pt.trickplay_amazon(1, 2)
 tv.press_rc_key(rc.HOME)
 tv.wait_in_second(10)
 tv.clear_launch_app(app.SONY_SELECT_PKG, app.SONY_SELECT_ACT)
-tv.wait_in_second(10)
+tv.wait_in_second(8)
+# Navigate all category on Sony Select
 for i in range(1, 11):
     tv.press_rc_key(rc.DOWN)
     print(f'Down presses count: {i}')
-tv.press_rc_key(rc.HOME)
-tv.wait_in_second(10)
 
+tv.press_rc_key(rc.HOME)
+tv.wait_in_second(5)
 tv.press_rc_key(rc.DISCOVER)
 
 # ----------------------- Keep terminal open -----------------------------

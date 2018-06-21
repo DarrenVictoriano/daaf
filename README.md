@@ -72,7 +72,7 @@ Below are functions from **Power_Tools** module. Example "*pt.trickplay_hdmi(rc.
 
 **playback_hdmi(hdmi, time=0)** - takes 2 arguments first the HDMI input from RC_codes, then playback time in minutes. This will tune to \<HDMI\> you set then playback content for \<time you set\>
 
-**playback_rf(time=0)** - takes 1 argument; playback time in minutes. This will tune to TV Input then playback content for \<time you set\>
+**playback_rf(time=0, down=6)** - takes 2 argument; playback time in minutes and down press count, from top of Home menu to Channel Icon on Home. This will tune to TV Input then playback content for \<time you set\> (Android N only)
 
 **volume_change(time=2, loop=4)** - takes 2 arguments; time of playback after changing volume then loop count of how many volume presses should the script make.
 
