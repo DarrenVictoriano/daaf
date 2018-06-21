@@ -39,21 +39,21 @@ start = input("Press Enter to start")
 # Automation Start
 # ----------------------- TV Input Test -----------------------------
 # Tune to RF
-pt.playback_rf(1, 6)
-pt.volume_change(1, 4)
-pt.trickplay_hdmi(1, 3)
+pt.playback_rf(0.5, 6)
+pt.volume_change(0.3, 4)
+pt.trickplay_hdmi(0.3, 3)
 
 # ------------------------- HDMI Test -------------------------------
-pt.playback_hdmi(rc.HDMI1, 1)
-pt.trickplay_hdmi(1, 3)
-pt.volume_change(1, 4)
+pt.playback_hdmi(rc.HDMI1, 0.3)
+pt.trickplay_hdmi(0.3, 3)
+pt.volume_change(0.3, 4)
 
 # -------------------------- BDP Test --------------------------------
-pt.playback_hdmi(rc.HDMI2, 1)
+pt.playback_hdmi(rc.HDMI2, 0.5)
 tv.press_rc_key(rc.ENTER)
-tv.wait_in_minute(2)
-pt.volume_change(1, 4)
-pt.trickplay_amazon(1, 2)
+tv.wait_in_minute(0.5)
+pt.volume_change(0.3, 4)
+pt.trickplay_amazon(0.5, 2)
 
 # -------------------------- Other Test --------------------------------
 tv.press_rc_key(rc.HOME)

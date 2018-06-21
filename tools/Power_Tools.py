@@ -29,6 +29,7 @@ def playback_hdmi(hdmi, time=0):
 def playback_rf(time=0, down=6):
     """Tune to RF Input then playback"""
     tv.press_rc_key(rc.HOME)
+    tv.wait_in_second(10)
     for i in range(1, down):
         tv.press_rc_key(rc.DOWN)
         print(f'Down press count: {i}')
