@@ -11,6 +11,7 @@ class AppList:
         self.VUDU_PKG = "air.com.vudu.air.DownloaderTablet"
         self.SETTINGS_PKG = "com.android.tv.settings"
         self.PSVUE_PKG = "com.snei.vue.atv"
+        self.SONY_SELECT_PKG = "com.sony.dtv.sonyselect"
 
         # List of app app_activity
         self.NETFLIX_ACT = "com.netflix.ninja.MainActivity"
@@ -20,3 +21,4 @@ class AppList:
         self.VUDU_ACT = "com.vudu.android.app.activities.NavigationListActivity"
         self.SETTINGS_ACT = "com.sony.dtv.settings.MainSettings"
         self.PSVUE_ACT = "com.snei.vue.ui.MainActivity"
+        self.SONY_SELECT_ACT = "com.sony.dtv.sonyselect.activities.LaunchActivity"

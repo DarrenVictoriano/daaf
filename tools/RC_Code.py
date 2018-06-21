@@ -35,6 +35,7 @@ class SonyRCKey:
         self.BACK = "KEYCODE_BACK"
         self.HOME = "KEYCODE_HOME"
         self.TV = "KEYCODE_TV"
+        self.DISCOVER = "KEYCODE_BUTTON_1"
 
         self.UP = "KEYCODE_DPAD_UP"
         self.DOWN = "KEYCODE_DPAD_DOWN"
