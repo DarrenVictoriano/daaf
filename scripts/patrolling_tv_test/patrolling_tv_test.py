@@ -49,8 +49,8 @@ pt.trickplay_hdmi(0.3, 3)
 pt.volume_change(0.3, 4)
 
 # -------------------------- BDP Test --------------------------------
-pt.playback_hdmi(rc.HDMI2, 0.5)
-tv.press_rc_key(rc.ENTER)
+pt.playback_hdmi(rc.HDMI2, 0)
+bdp = input("play bdp disk and then press enter to continue")
 tv.wait_in_minute(0.5)
 pt.volume_change(0.3, 4)
 pt.trickplay_amazon(0.5, 2)
