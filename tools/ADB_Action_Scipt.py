@@ -66,7 +66,7 @@ class ActionScript:
     def wait_in_minute(minute):
         """Pauses the script based on specified time (in seconds)"""
         try:
-            sec = float(min) * 60.0
+            sec = float(minute) * 60.0
             out = float(sec)
         except ValueError:
             print("Only Integer or Float is acceptable")
