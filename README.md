@@ -167,22 +167,24 @@ VIDEO - Tune to Video
 ___
 Below are the list of **AppList()**, Concatinate with AppList instance to use it. Example "*app.NETFLIX_PKG or app.NETFLIX_ACT*"
 ```
-NETFLIX_PKG - Netflix Package Name
-AMAZON_PKG - Amazon Package Name
-HULU_PKG - Hulu Package Name
-YOUTUBE_PKG - YouTube Package Name
-VUDU_PKG - Vudu Package Name
-SETTINGS_PKG - Settings Package Name
-PSVUE_PKG - PS Vue Package Name
-SONY_SELECT_PKG - Sony select Package Name
+NETFLIX_PKG - Netflix package name
+AMAZON_PKG - Amazon package name
+HULU_PKG - Hulu package name
+YOUTUBE_PKG - YouTube package name
+VUDU_PKG - Vudu package name
+SETTINGS_PKG - Settings package name
+PSVUE_PKG - PS Vue package name
+SONY_SELECT_PKG - Sony select package name
+PARENTALLOCK_PKG - Sony Parental Lock package name
 ```
 ```
-NETFLIX_ACT - Netflix Activity Name
-AMAZON_ACT - Amazon Activity Name
-HULU_ACT - Hulu Activity Name
-YOUTUBE_ACT - YouTube Activity Name
-VUDU_ACT - Vudu Activity Name
-SETTINGS_ACT - Settings Activity Name
-PSVUE_ACT - PS Vue Activity Name
-SONY_SELECT_ACT - Sony select Activity Name
+NETFLIX_ACT - Netflix activity name
+AMAZON_ACT - Amazon activity name
+HULU_ACT - Hulu activity name
+YOUTUBE_ACT - YouTube activity name
+VUDU_ACT - Vudu activity name
+SETTINGS_ACT - Settings activity name
+PSVUE_ACT - PS Vue activity name
+SONY_SELECT_ACT - Sony select activity name
+PARENTALLOCK_ACT - Sony Parental Lock activity name
 ```
