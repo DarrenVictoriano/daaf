@@ -9,7 +9,6 @@ sys.path.append(tool_dir)
 from ADB_Action_Scipt import ActionScript
 from RC_Code import SonyRCKey
 from AppList import AppList
-import Power_Tools as pt  # Read Power_Tools Documentation for more info
 
 # create an instance of the class, variables can be change
 tv = ActionScript()

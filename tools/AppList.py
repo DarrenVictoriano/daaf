@@ -12,6 +12,7 @@ class AppList:
         self.SETTINGS_PKG = "com.android.tv.settings"
         self.PSVUE_PKG = "com.snei.vue.atv"
         self.PARENTALLOCK_PKG = "com.sony.dtv.tvsettingsbroadcast"
+        self.SONY_SELECT_PKG = "com.sony.dtv.sonyselect"
 
         # List of app app_activity
         self.NETFLIX_ACT = "com.netflix.ninja.MainActivity"
@@ -22,3 +23,4 @@ class AppList:
         self.SETTINGS_ACT = "com.sony.dtv.settings.MainSettings"
         self.PSVUE_ACT = "com.snei.vue.ui.MainActivity"
         self.PARENTALLOCK_ACT = "com.sony.dtv.tvsettings.parentalcontrolsetting.activities.ParentalLockActivity"
+        self.SONY_SELECT_ACT = "com.sony.dtv.sonyselect.activities.LaunchActivity"

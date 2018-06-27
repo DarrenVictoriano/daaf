@@ -27,10 +27,11 @@ print("This is what the script does:")
 print("Launch Hulu for 1 hour")
 print("Launch Netflix for 1 hour")
 print("Launch Amazon for 1 hour")
-print("Tune back to HDMI1 for 1 hour")
-print("Power OFF TV")
+print("Tune back to HDMI for 1 hour")
+print("Power OFF TV\n")
 
-start = input("Press Enter to start script")
+print("What HDMI input your IRB is setup?")
+hdmiInput = input("Enter number: 1, 2, 3 or 4: ")
 
 # Automation Start
 # ------------------------------- Hulu ----------------------------------
@@ -64,6 +65,11 @@ tv.press_rc_key(rc.ENTER)  # playback start
 tv.wait_in_hour(1)
 tv.press_rc_key(rc.HOME)
 tv.wait_in_second(5)
+
+# ------------------------------- HDMI ---------------------------------
+rcHDMI = pt.select_hdmi_input(hdmiInput)
+pt.playback_hdmi(rcHDMI, 10)
+pt.trickplay_hdmi(10, 3)
 
 # RC OFF TV
 tv.press_rc_key(rc.POWER)
