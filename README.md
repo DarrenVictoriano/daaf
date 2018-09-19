@@ -16,9 +16,7 @@
 * Run python script (double click ".py" file)
 
 ### Create your own:
-* Creating script inside "/DAAF/script" folder (this is recommended to keep script organized)
-    * Navigate to "DAAF/script" folder and read the description.
-* Creating script on root directory "/DAAF" (only use this for quick script testing)
+* Just download the "/tools" folder and import the required tools
     * First create a python file then import the following:
         ```
         # First import the ADB_Action_Script.py it must be on the same folder
