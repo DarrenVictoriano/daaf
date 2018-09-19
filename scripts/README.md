@@ -21,12 +21,18 @@
 * Creating script on root directory "/DAAF" (only use this for quick script testing)
     * First create a python file then import the following:
         ```
-        # First import the ADB_Action_Script.py it must be on the same folder
-        from tools.ADB_Action_Scipt import ActionScript
-        # then import the RC keys and App PKGs for easy scripting
-        from tools.RC_Code import SonyRCKey
-        from tools.AppList import AppList
-        import Power_Tools as pt
+        # include path for /tools folder
+        import sys
+        import os.path
+        tool_dir = (os.path.abspath(
+                    os.path.join(os.path.dirname(__file__), '..', '..')) + '/tools/')
+        sys.path.append(tool_dir)
+
+        # import the required tools
+        from ADB_Action_Scipt import ActionScript
+        from RC_Code import SonyRCKey
+        from AppList import AppList
+        import Power_Tools as pt  # read Documentation for more info
         ```
     * Second, Create an instance of the classes.
         ```
