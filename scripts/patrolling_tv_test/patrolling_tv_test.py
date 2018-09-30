@@ -1,9 +1,9 @@
 # include path for /tools folder
 import sys
 import os.path
-tool_dir = (os.path.abspath(
-            os.path.join(os.path.dirname(__file__), '..', '..')) + '/tools/')
-sys.path.append(tool_dir)
+TOOL_DIR = (os.path.abspath(
+            os.path.join(os.path.dirname(__file__), '..', '..')))
+sys.path.append(TOOL_DIR)
 
 # import the required tools
 from ADB_Action_Scipt import ActionScript

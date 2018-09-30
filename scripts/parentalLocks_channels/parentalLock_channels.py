@@ -1,9 +1,9 @@
 # include path for /tools folder
 import sys
 import os.path
-tool_dir = (os.path.abspath(
-            os.path.join(os.path.dirname(__file__), '..', '..')) + '/tools/')
-sys.path.append(tool_dir)
+TOOL_DIR = (os.path.abspath(
+            os.path.join(os.path.dirname(__file__), '..', '..')))
+sys.path.append(TOOL_DIR)
 
 
 from ADB_Action_Scipt import ActionScript
@@ -22,7 +22,7 @@ print("Please verify the ratings etc as channel changes according to the setting
 
 start = input("Press Enter when ready to start the script")
 # Automation Start
-#Tunes to channels input
+# Tunes to channels input
 tv.press_rc_key(rc.CHANNELS)
 
 tv.wait_in_second(1.25)
